@@ -1,62 +1,62 @@
 workflows:
-ios-carplay-build:
-name: CarPlay iOS Unsigned Build
-max_build_duration: 60
+  ios-carplay-build:
+    name: CarPlay iOS Unsigned Build
+    max_build_duration: 60
 
-environment:
-  node: 22
+    environment:
+      node: 22
 
-scripts:
-  - name: Install dependencies
-    script: |
-      npm install
+    scripts:
+      - name: Install dependencies
+        script: |
+          npm install
 
-  - name: Add iOS platform
-    script: |
-      npx cap add ios || true
+      - name: Add iOS platform
+        script: |
+          npx cap add ios || true
 
-  - name: Sync project
-    script: |
-      npx cap sync ios
+      - name: Sync project
+        script: |
+          npx cap sync ios
 
-  - name: Install CocoaPods
-    script: |
-      cd ios/App
-      pod install
+      - name: Install CocoaPods
+        script: |
+          cd ios/App
+          pod install
 
-  - name: Create export options
-    script: |
-      cat <<EOF > export_options.plist
-      <?xml version="1.0" encoding="UTF-8"?>
-      <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-      <plist version="1.0">
-      <dict>
-          <key>method</key>
-          <string>development</string>
-          <key>signingStyle</key>
-          <string>manual</string>
-      </dict>
-      </plist>
-      EOF
+      - name: Create export options
+        script: |
+          cat <<EOF > export_options.plist
+          <?xml version="1.0" encoding="UTF-8"?>
+          <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+          <plist version="1.0">
+          <dict>
+              <key>method</key>
+              <string>development</string>
+              <key>signingStyle</key>
+              <string>manual</string>
+          </dict>
+          </plist>
+          EOF
 
-  - name: Build unsigned IPA
-    script: |
-      cd ios/App
+      - name: Build unsigned IPA
+        script: |
+          cd ios/App
 
-      xcodebuild \
-        -workspace App.xcworkspace \
-        -scheme App \
-        -configuration Release \
-        -archivePath build/App.xcarchive \
-        archive \
-        CODE_SIGNING_ALLOWED=NO
+          xcodebuild \
+            -workspace App.xcworkspace \
+            -scheme App \
+            -configuration Release \
+            -archivePath build/App.xcarchive \
+            archive \
+            CODE_SIGNING_ALLOWED=NO
 
-      xcodebuild \
-        -exportArchive \
-        -archivePath build/App.xcarchive \
-        -exportPath build \
-        -exportOptionsPlist export_options.plist \
-        CODE_SIGNING_ALLOWED=NO
+          xcodebuild \
+            -exportArchive \
+            -archivePath build/App.xcarchive \
+            -exportPath build \
+            -exportOptionsPlist export_options.plist \
+            CODE_SIGNING_ALLOWED=NO
 
-artifacts:
-  - ios/App/build/*.ipa
+    artifacts:
+      - ios/App/build/*.ipa
