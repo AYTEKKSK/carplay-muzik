@@ -9,19 +9,22 @@ workflows:
     scripts:
       - name: Install dependencies
         script: |
+          cd ios-app
           npm install
 
       - name: Add iOS platform
         script: |
+          cd ios-app
           npx cap add ios || true
 
       - name: Sync project
         script: |
+          cd ios-app
           npx cap sync ios
 
       - name: Install CocoaPods
         script: |
-          cd ios/App
+          cd ios-app/ios/App
           pod install
 
       - name: Create export options
@@ -41,7 +44,7 @@ workflows:
 
       - name: Build unsigned IPA
         script: |
-          cd ios/App
+          cd ios-app/ios/App
 
           xcodebuild \
             -workspace App.xcworkspace \
@@ -59,4 +62,4 @@ workflows:
             CODE_SIGNING_ALLOWED=NO
 
     artifacts:
-      - ios/App/build/*.ipa
+      - ios-app/ios/App/build/*.ipa
