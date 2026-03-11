@@ -1,0 +1,56 @@
+workflows:
+ios-carplay-build:
+name: CarPlay iOS Build + TestFlight
+max_build_duration: 60
+
+environment:
+  xcode: latest
+  node: 18
+  groups:
+    - app_store_credentials
+
+triggering:
+  events:
+    - push
+  branch_patterns:
+    - pattern: main
+      include: true
+
+scripts:
+  - name: Install dependencies
+    script: |
+      npm install
+      npm install @capacitor/core @capacitor/cli @capacitor/ios
+
+  - name: Add iOS platform
+    script: |
+      npx cap add ios || true
+
+  - name: Sync Capacitor
+    script: |
+      npx cap sync ios
+
+  - name: Install CocoaPods
+    script: |
+      cd ios/App
+      pod install
+
+  - name: Set build number
+    script: |
+      cd ios/App
+      agvtool new-version -all $BUILD_NUMBER
+
+  - name: Build IPA
+    script: |
+      xcode-project build-ipa \
+        --workspace "ios/App/App.xcworkspace" \
+        --scheme "App"
+
+artifacts:
+  - build/ios/ipa/*.ipa
+  - /tmp/xcodebuild_logs/*.log
+
+publishing:
+  app_store_connect:
+    auth: integration
+    submit_to_testflight: true
