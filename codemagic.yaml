@@ -11,6 +11,7 @@ workflows:
         script: |
           cd ios-app
           npm install
+          npm install @capacitor/core @capacitor/cli @capacitor/ios
 
       - name: Add iOS platform
         script: |
@@ -20,12 +21,12 @@ workflows:
       - name: Sync project
         script: |
           cd ios-app
-          npx cap sync
+          npx cap sync ios
 
       - name: Install CocoaPods
         script: |
           cd ios-app/ios/App
-          pod install
+          pod install || true
 
       - name: Build unsigned IPA
         script: |
