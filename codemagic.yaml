@@ -1,41 +1,35 @@
 workflows:
-ios-carplay-build:
-name: CarPlay iOS Unsigned Build
+  ios-carplay-build:
+    name: CarPlay iOS Unsigned Build
 
-environment:
-  xcode: latest
-  node: 18
+    environment:
+      xcode: latest
+      node: 18
 
-scripts:
-  - name: Install dependencies
-    script: |
-      cd ios-app
-      npm install
-      npm install @capacitor/core @capacitor/cli @capacitor/ios
+    scripts:
+      - name: Install dependencies
+        script: |
+          npm install
+          npm install @capacitor/core @capacitor/cli @capacitor/ios
 
-  - name: Add iOS platform
-    script: |
-      cd ios-app
-      npx cap add ios || true
+      - name: Add iOS platform
+        script: |
+          npx cap add ios || true
 
-  - name: Sync project
-    script: |
-      cd ios-app
-      npx cap sync ios
+      - name: Sync project
+        script: |
+          npx cap sync ios
 
-  - name: Install CocoaPods
-    script: |
-      cd ios-app/ios/App
-      pod install
+      - name: Install CocoaPods
+        script: |
+          cd ios/App
+          pod install
 
-  - name: Build unsigned IPA
-    script: |
-      cd ios-app
-      xcode-project build-ipa \
-        --workspace "ios/App/App.xcworkspace" \
-        --scheme "App" \
-        --archive-flags="-allowProvisioningUpdates"
+      - name: Build unsigned IPA
+        script: |
+          xcode-project build-ipa \
+            --workspace "ios/App/App.xcworkspace" \
+            --scheme "App"
 
-artifacts:
-  - ios-app/build/ios/ipa/*.ipa
-# refresh
+    artifacts:
+      - build/ios/ipa/*.ipa
