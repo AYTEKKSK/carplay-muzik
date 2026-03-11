@@ -1,15 +1,16 @@
 workflows:
   ios-build:
     name: Build iOS IPA
-    max_build_duration: 60
 
     environment:
       xcode: latest
+      node: 18
 
     scripts:
       - name: Install dependencies
         script: |
           npm install
+          npm install @capacitor/core @capacitor/cli @capacitor/ios
           npx cap sync ios
 
       - name: Install CocoaPods
@@ -25,4 +26,3 @@ workflows:
 
     artifacts:
       - build/ios/ipa/*.ipa
-      - /tmp/xcodebuild_logs/*.log
