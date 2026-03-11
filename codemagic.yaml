@@ -1,36 +1,20 @@
 workflows:
-  ios-carplay-build:
-    name: CarPlay iOS Unsigned Build
-
+  ios-workflow:
+    name: iOS Workflow
     environment:
-      xcode: latest
-      node: 22
+      vars:
+        XCODE_WORKSPACE: "App.xcworkspace"
+        XCODE_SCHEME: "App"
 
     scripts:
       - name: Install dependencies
         script: |
-          cd ios-app
-          npm install
-          npm install @capacitor/core @capacitor/cli @capacitor/ios
-
-      - name: Add iOS platform
-        script: |
-          cd ios-app
-          npx cap add ios || true
-
-      - name: Sync project
-        script: |
-          cd ios-app
-          npx cap sync ios
-
-      - name: Install CocoaPods
-        script: |
           cd ios-app/ios/App
-          pod install || true
+          pod install
 
       - name: Create export options
         script: |
-          cat > exportOptions.plist <<EOF
+          cat > ios-app/exportOptions.plist <<EOF
           <?xml version="1.0" encoding="UTF-8"?>
           <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
           <plist version="1.0">
@@ -47,9 +31,9 @@ workflows:
         script: |
           cd ios-app/ios/App
           xcode-project build-ipa \
-            --workspace "App.xcworkspace" \
-            --scheme "App" \
-            --export-options-plist "../../exportOptions.plist"
+            --workspace "$XCODE_WORKSPACE" \
+            --scheme "$XCODE_SCHEME" \
+            --export-options-plist "../exportOptions.plist"
 
     artifacts:
-      - ios-app/build/ios/ipa/*.ipa
+      - build/ios/ipa/*.ipa
