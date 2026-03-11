@@ -30,9 +30,9 @@ workflows:
 
       - name: Build unsigned IPA
         script: |
-          cd ios-app
+          cd ios-app/ios/App
           xcode-project build-ipa \
-            --workspace "ios/App/App.xcworkspace" \
+            --workspace "App.xcworkspace" \
             --scheme "App"
 
     artifacts:
