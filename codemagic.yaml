@@ -4,7 +4,7 @@ workflows:
 
     environment:
       xcode: latest
-      node: 22
+      node: 18
 
     scripts:
       - name: Install dependencies
@@ -26,20 +26,30 @@ workflows:
       - name: Install CocoaPods
         script: |
           cd ios-app/ios/App
-          pod install || true
+          pod install
+
+      - name: Create export options
+        script: |
+          cat > exportOptions.plist <<EOF
+          <?xml version="1.0" encoding="UTF-8"?>
+          <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+          <plist version="1.0">
+          <dict>
+            <key>method</key>
+            <string>development</string>
+            <key>compileBitcode</key>
+            <false/>
+          </dict>
+          </plist>
+          EOF
 
       - name: Build unsigned IPA
         script: |
           cd ios-app/ios/App
-          if [ -d "App.xcworkspace" ]; then
-            xcode-project build-ipa \
-              --workspace "App.xcworkspace" \
-              --scheme "App"
-          else
-            xcode-project build-ipa \
-              --project "App.xcodeproj" \
-              --scheme "App"
-          fi
+          xcode-project build-ipa \
+            --workspace "App.xcworkspace" \
+            --scheme "App" \
+            --export-options-plist "../../exportOptions.plist"
 
     artifacts:
       - ios-app/build/ios/ipa/*.ipa
