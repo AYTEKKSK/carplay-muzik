@@ -16,7 +16,6 @@ output.txt
 # Node / Capacitor
 node_modules/
 ios-app/node_modules/
-ios-app/ios/
 ios-app/.gradle/
 
 # Uploads (kullanıcı yüklemeleri repoya girmez)
