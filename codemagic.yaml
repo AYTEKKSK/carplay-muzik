@@ -1,26 +1,45 @@
-#!/usr/bin/env bash
+workflows:
+  ios-carplay-build:
+    name: CarPlay iOS Unsigned Build
 
-cd ios-app/ios/App
+    environment:
+      xcode: latest
+      node: 22
 
-echo "Checking files..."
-ls -la
+    scripts:
+      - name: Install dependencies
+        script: |
+          cd ios-app
+          npm install
+          npm install @capacitor/core @capacitor/cli @capacitor/ios
 
-if [ -f "Podfile" ]; then
-  echo "Installing pods..."
-  pod install
-fi
+      - name: Add iOS platform
+        script: |
+          cd ios-app
+          npx cap add ios || true
 
-echo "Checking workspace..."
-ls -la
+      - name: Sync project
+        script: |
+          cd ios-app
+          npx cap sync ios
 
-if [ -d "App.xcworkspace" ]; then
-  echo "Building using workspace"
-  xcode-project build-ipa \
-    --workspace "App.xcworkspace" \
-    --scheme "App"
-else
-  echo "Workspace not found, building using project"
-  xcode-project build-ipa \
-    --project "App.xcodeproj" \
-    --scheme "App"
-fi
+      - name: Install CocoaPods
+        script: |
+          cd ios-app/ios/App
+          pod install || true
+
+      - name: Build unsigned IPA
+        script: |
+          cd ios-app/ios/App
+          if [ -d "App.xcworkspace" ]; then
+            xcode-project build-ipa \
+              --workspace "App.xcworkspace" \
+              --scheme "App"
+          else
+            xcode-project build-ipa \
+              --project "App.xcodeproj" \
+              --scheme "App"
+          fi
+
+    artifacts:
+      - ios-app/build/ios/ipa/*.ipa
