@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    ╔══════════════════════════════════════════════════════════════════════╗
+    ║  Bu dosyadaki tüm key/value çiftlerini Xcode'da Info.plist'e ekle   ║
+    ║  Capacitor projesi: ios/App/App/Info.plist                           ║
+    ╚══════════════════════════════════════════════════════════════════════╝
+-->
+<plist version="1.0">
+<dict>
+
+    <!-- ════════════════════════════════════════════════
+         1. ARKA PLANDA MÜZİK ÇALMA (Zorunlu)
+         ════════════════════════════════════════════════ -->
+    <key>UIBackgroundModes</key>
+    <array>
+        <string>audio</string>
+        <string>fetch</string>
+    </array>
+
+    <!-- ════════════════════════════════════════════════
+         2. CARPLAY SCENE TANIMI (Zorunlu)
+         ════════════════════════════════════════════════ -->
+    <key>UIApplicationSceneManifest</key>
+    <dict>
+        <key>UIApplicationSupportsMultipleScenes</key>
+        <true/>
+        <key>UISceneConfigurations</key>
+        <dict>
+
+            <!-- iPhone ekranı (Capacitor WebView açar) -->
+            <key>UIWindowSceneSessionRoleApplication</key>
+            <array>
+                <dict>
+                    <key>UISceneConfigurationName</key>
+                    <string>Default Configuration</string>
+                    <key>UISceneDelegateClassName</key>
+                    <string>$(PRODUCT_MODULE_NAME).SceneDelegate</string>
+                </dict>
+            </array>
+
+            <!-- CarPlay ekranı -->
+            <key>CPTemplateApplicationSceneSessionRoleApplication</key>
+            <array>
+                <dict>
+                    <key>UISceneClassName</key>
+                    <string>CPTemplateApplicationScene</string>
+                    <key>UISceneConfigurationName</key>
+                    <string>CarPlay Configuration</string>
+                    <key>UISceneDelegateClassName</key>
+                    <string>$(PRODUCT_MODULE_NAME).CarPlaySceneDelegate</string>
+                </dict>
+            </array>
+
+        </dict>
+    </dict>
+
+    <!-- ════════════════════════════════════════════════
+         3. ATS - HTTPS zorunluluğu (sunucu HTTPS ise gerek yok)
+         ════════════════════════════════════════════════ -->
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsArbitraryLoads</key>
+        <false/>
+        <!-- Sadece YouTube stream URL'leri için izin (süresi dolan URL'ler HTTP olabilir) -->
+        <key>NSAllowsArbitraryLoadsForMedia</key>
+        <true/>
+    </dict>
+
+    <!-- ════════════════════════════════════════════════
+         4. UYGULAMA SINIRI (WKWebView güvenlik)
+         ════════════════════════════════════════════════ -->
+    <key>WKAppBoundDomains</key>
+    <array>
+        <string>app.articnc.online</string>
+        <string>img.youtube.com</string>
+    </array>
+
+</dict>
+</plist>

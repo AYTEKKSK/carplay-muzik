@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Müzik – Uygulamayı Yükle</title>
+
+  <!-- ── iOS PWA meta tags ── -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Müzik">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#0a0a0a">
+  <meta name="application-name" content="Müzik">
+
+  <!-- ── Open Graph / WhatsApp preview ── -->
+  <meta property="og:title" content="Müzik – Ücretsiz Müzik Çalar">
+  <meta property="og:description" content="YouTube'dan müzik dinle, playlist oluştur. Ana ekrana ekle, uygulama gibi kullan.">
+  <meta property="og:image" content="https://muzik.articnc.online/static/icon-512.png">
+  <meta property="og:url" content="https://muzik.articnc.online/install">
+  <meta property="og:type" content="website">
+
+  <!-- ── Icons ── -->
+  <link rel="icon" href="/static/icon-192.png" type="image/png">
+  <link rel="apple-touch-icon" href="/static/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/static/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="167x167" href="/static/apple-touch-icon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/static/apple-touch-icon.png">
+
+  <!-- ── iOS splash screens ── -->
+  <link rel="apple-touch-startup-image" href="/static/icon-512.png">
+
+  <style>
+    /* ─────────────────────── Reset & base ─────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg:        #0a0a0a;
+      --surface:   #141414;
+      --surface2:  #1e1e1e;
+      --border:    #2a2a2a;
+      --red:       #e60000;
+      --red2:      #ff1a1a;
+      --text:      #f5f5f5;
+      --muted:     #888;
+      --green:     #1db954;
+      --ios-blue:  #007aff;
+      --radius:    20px;
+      --safe-bot:  env(safe-area-inset-bottom, 20px);
+    }
+    html, body {
+      height: 100%;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display",
+                   "Segoe UI", Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* ─────────────────────── Splash screen ─────────────────────── */
+    #splash {
+      position: fixed; inset: 0; z-index: 999;
+      background: var(--bg);
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center; gap: 20px;
+      transition: opacity .5s ease;
+    }
+    #splash.hidden { opacity: 0; pointer-events: none; }
+    .splash-icon {
+      width: 88px; height: 88px;
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: 0 12px 40px rgba(230,0,0,.4);
+      animation: pulse 1.2s ease-in-out infinite;
+    }
+    .splash-icon img { width: 100%; height: 100%; object-fit: cover; }
+    .splash-title {
+      font-size: 1.5rem; font-weight: 700; letter-spacing: .5px;
+      background: linear-gradient(135deg, var(--red), #ff6666);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .splash-bar {
+      width: 160px; height: 3px;
+      background: var(--border); border-radius: 3px; overflow: hidden;
+    }
+    .splash-bar-fill {
+      height: 100%; width: 0;
+      background: linear-gradient(90deg, var(--red), var(--red2));
+      border-radius: 3px;
+      animation: loadbar 1.4s ease forwards;
+    }
+    @keyframes loadbar { to { width: 100%; } }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); box-shadow: 0 12px 40px rgba(230,0,0,.4); }
+      50%       { transform: scale(1.05); box-shadow: 0 16px 50px rgba(230,0,0,.6); }
+    }
+
+    /* ─────────────────────── Main layout ─────────────────────── */
+    #main {
+      min-height: 100vh;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: flex-start;
+      padding: 0 0 calc(40px + var(--safe-bot));
+      opacity: 0; transform: translateY(20px);
+      transition: opacity .5s ease .2s, transform .5s ease .2s;
+    }
+    #main.visible { opacity: 1; transform: none; }
+
+    /* ─────────────────────── Hero header ─────────────────────── */
+    .hero {
+      width: 100%;
+      background: linear-gradient(160deg, #1a0000 0%, #0a0a0a 60%);
+      padding: 60px 24px 48px;
+      display: flex; flex-direction: column; align-items: center; gap: 20px;
+      border-bottom: 1px solid var(--border);
+    }
+    .app-icon-wrap {
+      position: relative;
+      width: 110px; height: 110px;
+    }
+    .app-icon {
+      width: 110px; height: 110px;
+      border-radius: 26px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(230,0,0,.5);
+    }
+    .app-icon img { width: 100%; height: 100%; object-fit: cover; }
+    .badge-verified {
+      position: absolute; bottom: -6px; right: -6px;
+      width: 28px; height: 28px;
+      background: var(--green); border-radius: 50%;
+      border: 2px solid var(--bg);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 13px;
+    }
+    .app-name {
+      font-size: 2rem; font-weight: 800; letter-spacing: -.5px;
+    }
+    .app-tagline {
+      color: var(--muted); font-size: .95rem; text-align: center;
+      max-width: 280px; line-height: 1.5;
+    }
+    .stats-row {
+      display: flex; gap: 28px; justify-content: center;
+    }
+    .stat { text-align: center; }
+    .stat-val { font-size: 1.1rem; font-weight: 700; color: var(--text); }
+    .stat-lbl { font-size: .72rem; color: var(--muted); text-transform: uppercase; letter-spacing: .5px; margin-top: 2px; }
+
+    /* ─────────────────────── Install button ─────────────────────── */
+    .install-wrap {
+      width: 100%; max-width: 400px;
+      padding: 28px 24px 0;
+    }
+    .btn-install {
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+      width: 100%; padding: 18px;
+      background: linear-gradient(135deg, var(--red), #cc0000);
+      color: #fff; font-size: 1.05rem; font-weight: 700;
+      border: none; border-radius: 16px; cursor: pointer;
+      text-decoration: none;
+      box-shadow: 0 8px 30px rgba(230,0,0,.45);
+      transition: transform .15s, box-shadow .15s;
+      letter-spacing: .2px;
+    }
+    .btn-install:active { transform: scale(.97); box-shadow: 0 4px 16px rgba(230,0,0,.35); }
+    .btn-sub {
+      text-align: center; margin-top: 10px;
+      font-size: .8rem; color: var(--muted);
+    }
+
+    /* ─────────────────────── Device-specific sections ─────────────────────── */
+    .section {
+      width: 100%; max-width: 400px;
+      padding: 28px 24px 0;
+    }
+    .section-title {
+      font-size: .78rem; text-transform: uppercase; letter-spacing: 1.5px;
+      color: var(--muted); margin-bottom: 14px;
+    }
+
+    /* ─────────────────────── iOS instruction card ─────────────────────── */
+    .ios-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .ios-card-head {
+      padding: 14px 18px;
+      background: linear-gradient(135deg, #001a33, #001020);
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; gap: 10px;
+      font-size: .88rem; font-weight: 600;
+    }
+    .ios-card-head .dot {
+      width: 8px; height: 8px; border-radius: 50%; background: var(--ios-blue);
+      box-shadow: 0 0 8px var(--ios-blue);
+    }
+    .ios-step {
+      display: flex; align-items: flex-start; gap: 14px;
+      padding: 16px 18px;
+      border-bottom: 1px solid var(--border);
+    }
+    .ios-step:last-child { border-bottom: none; }
+    .step-num {
+      flex-shrink: 0;
+      width: 28px; height: 28px;
+      border-radius: 50%;
+      background: var(--ios-blue);
+      color: #fff; font-size: .82rem; font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .step-text { flex: 1; }
+    .step-text strong { font-size: .95rem; display: block; margin-bottom: 3px; }
+    .step-text span { font-size: .82rem; color: var(--muted); line-height: 1.4; }
+    .step-icon {
+      font-size: 1.4rem; flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* Safari warning */
+    #safariWarn {
+      background: rgba(255,160,0,.1);
+      border: 1px solid rgba(255,160,0,.35);
+      border-radius: 14px; padding: 14px 16px;
+      font-size: .85rem; color: #ffc77a;
+      display: flex; gap: 10px; align-items: flex-start;
+      margin-bottom: 16px;
+    }
+    #safariWarn.hidden { display: none; }
+
+    /* ─────────────────────── Feature pills ─────────────────────── */
+    .features {
+      display: flex; flex-wrap: wrap; gap: 10px;
+    }
+    .feature-pill {
+      background: var(--surface2); border: 1px solid var(--border);
+      border-radius: 40px; padding: 8px 14px;
+      font-size: .82rem; display: flex; align-items: center; gap: 7px;
+      color: var(--text);
+    }
+    .feature-pill .pip { color: var(--red); font-size: 1rem; }
+
+    /* ─────────────────────── Android card ─────────────────────── */
+    .android-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 20px;
+    }
+    .android-step {
+      display: flex; align-items: flex-start; gap: 12px;
+      padding: 10px 0; border-bottom: 1px solid var(--border);
+    }
+    .android-step:last-child { border-bottom: none; }
+    .android-step .step-num { background: var(--green); }
+    .android-step .step-text strong { font-size: .93rem; }
+
+    /* ─────────────────────── Desktop card ─────────────────────── */
+    .desktop-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 24px;
+      text-align: center;
+    }
+    .qr-placeholder {
+      width: 140px; height: 140px; border-radius: 12px;
+      background: #fff; margin: 16px auto;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2.5rem;
+    }
+    .desktop-url {
+      background: var(--surface2); border: 1px solid var(--border);
+      border-radius: 10px; padding: 10px 14px;
+      font-family: monospace; font-size: .88rem; color: var(--ios-blue);
+      margin-top: 10px; word-break: break-all;
+    }
+
+    /* ─────────────────────── Footer ─────────────────────── */
+    .footer {
+      width: 100%; max-width: 400px;
+      padding: 32px 24px 0;
+      text-align: center;
+      font-size: .78rem; color: var(--muted); line-height: 1.6;
+    }
+    .footer a { color: var(--red); text-decoration: none; }
+
+    /* ─────────────────────── Hidden by default ─────────────────────── */
+    .for-ios, .for-android, .for-desktop { display: none; }
+    .for-ios.show, .for-android.show, .for-desktop.show { display: block; }
+
+    /* ─────────────────────── Animations ─────────────────────── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to   { opacity: 1; transform: none; }
+    }
+    .section, .install-wrap, .hero, .footer {
+      animation: fadeUp .5s ease both;
+    }
+    .section:nth-child(3) { animation-delay: .1s; }
+    .section:nth-child(4) { animation-delay: .18s; }
+    .section:nth-child(5) { animation-delay: .26s; }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════════ SPLASH ══════════════════════ -->
+<div id="splash">
+  <div class="splash-icon">
+    <img src="/static/icon-192.png" alt="Müzik">
+  </div>
+  <div class="splash-title">🎵 Müzik</div>
+  <div class="splash-bar"><div class="splash-bar-fill"></div></div>
+</div>
+
+<!-- ══════════════════════ MAIN ══════════════════════ -->
+<div id="main">
+
+  <!-- ── Hero ── -->
+  <div class="hero">
+    <div class="app-icon-wrap">
+      <div class="app-icon">
+        <img src="/static/icon-192.png" alt="Müzik">
+      </div>
+      <div class="badge-verified">✓</div>
+    </div>
+    <div>
+      <div class="app-name" style="text-align:center">🎵 Müzik</div>
+    </div>
+    <div class="app-tagline">
+      YouTube'dan ücretsiz müzik dinle, playlist oluştur. İnternet bağlantısı yeterli.
+    </div>
+    <div class="stats-row">
+      <div class="stat"><div class="stat-val">∞</div><div class="stat-lbl">Şarkı</div></div>
+      <div class="stat"><div class="stat-val">Ücretsiz</div><div class="stat-lbl">Fiyat</div></div>
+      <div class="stat"><div class="stat-val">PWA</div><div class="stat-lbl">Tür</div></div>
+    </div>
+  </div>
+
+  <!-- ── Install button ── -->
+  <div class="install-wrap">
+    <a class="btn-install" href="https://muzik.articnc.online" id="openBtn">
+      <span style="font-size:1.2rem">🎧</span>
+      Uygulamayı Aç
+    </a>
+    <div class="btn-sub" id="openBtnSub">Açıldıktan sonra aşağıdaki adımları takip edin</div>
+  </div>
+
+  <!-- ══════ iOS SECTION ══════ -->
+  <div class="section for-ios" id="iosSection">
+    <div class="section-title">📱 iPhone'a Yükleme – Safari Gerekli</div>
+
+    <!-- Safari uyarısı: sadece iOS + Safari DEĞİLSE göster -->
+    <div id="safariWarn">
+      <span style="font-size:1.3rem;flex-shrink:0">⚠️</span>
+      <span>
+        <strong>Safari ile açmalısınız!</strong><br>
+        Ana Ekrana Ekle özelliği sadece Safari'de çalışır.
+        Sağ üstten <strong>Safari'de Aç</strong>'a dokunun.
+      </span>
+    </div>
+
+    <div class="ios-card">
+      <div class="ios-card-head">
+        <div class="dot"></div>
+        <span>Ana Ekrana Nasıl Eklenir?</span>
+      </div>
+
+      <div class="ios-step">
+        <div class="step-num">1</div>
+        <div class="step-text">
+          <strong>Uygulamayı Safari'de Aç</strong>
+          <span>Yukarıdaki "Uygulamayı Aç" butonuna dokun</span>
+        </div>
+        <div class="step-icon">🌐</div>
+      </div>
+
+      <div class="ios-step">
+        <div class="step-num">2</div>
+        <div class="step-text">
+          <strong>Paylaş Butonuna Dokun</strong>
+          <span>Ekranın altındaki <strong>kare içinde yukarı ok</strong> ikonuna dokun</span>
+        </div>
+        <div class="step-icon">
+          <!-- iOS share icon SVG -->
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#007aff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/>
+            <polyline points="16 6 12 2 8 6"/>
+            <line x1="12" y1="2" x2="12" y2="15"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="ios-step">
+        <div class="step-num">3</div>
+        <div class="step-text">
+          <strong>"Ana Ekrana Ekle"ye Dokun</strong>
+          <span>Açılan menüde aşağı kaydır ve <strong>Ana Ekrana Ekle</strong>'yi seç</span>
+        </div>
+        <div class="step-icon">➕</div>
+      </div>
+
+      <div class="ios-step">
+        <div class="step-num">4</div>
+        <div class="step-text">
+          <strong>Ekle'ye Dokun</strong>
+          <span>Sağ üstteki <strong>Ekle</strong>'ye dokun — iPhone'unda ikon belirir!</span>
+        </div>
+        <div class="step-icon">✅</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════ ANDROID SECTION ══════ -->
+  <div class="section for-android" id="androidSection">
+    <div class="section-title">🤖 Android'e Yükleme</div>
+    <div class="android-card">
+      <div class="android-step">
+        <div class="step-num">1</div>
+        <div class="step-text">
+          <strong>Uygulamayı Aç</strong>
+          <span style="font-size:.82rem;color:var(--muted)">"Uygulamayı Aç" butonuna dokun</span>
+        </div>
+      </div>
+      <div class="android-step">
+        <div class="step-num">2</div>
+        <div class="step-text">
+          <strong>Sağ Üst Menüsü Aç</strong>
+          <span style="font-size:.82rem;color:var(--muted)">Chrome'da üç nokta (⋮) ikonuna dokun</span>
+        </div>
+      </div>
+      <div class="android-step">
+        <div class="step-num">3</div>
+        <div class="step-text">
+          <strong>"Ana Ekrana Ekle"yi Seç</strong>
+          <span style="font-size:.82rem;color:var(--muted)">veya "Uygulamayı Yükle" seçeneği çıkarsa ona dokun</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════ DESKTOP SECTION ══════ -->
+  <div class="section for-desktop" id="desktopSection">
+    <div class="section-title">💻 Mobil Cihazda Açın</div>
+    <div class="desktop-card">
+      <div style="font-size:.92rem;color:var(--muted)">
+        Bu sayfayı telefonunuzda açın
+      </div>
+      <div class="qr-placeholder">📱</div>
+      <div style="font-size:.85rem;color:var(--muted);margin-bottom:6px">veya bu linki kopyalayın:</div>
+      <div class="desktop-url">https://muzik.articnc.online/install</div>
+      <div style="margin-top:16px">
+        <a class="btn-install" href="https://muzik.articnc.online" style="display:inline-flex;width:auto;padding:14px 28px;font-size:.95rem;border-radius:12px;text-decoration:none">
+          Şimdi Aç
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════ FEATURES ══════ -->
+  <div class="section">
+    <div class="section-title">✨ Özellikler</div>
+    <div class="features">
+      <div class="feature-pill"><span class="pip">🎵</span> YouTube Müzik</div>
+      <div class="feature-pill"><span class="pip">📂</span> Playlist Yönetimi</div>
+      <div class="feature-pill"><span class="pip">🆓</span> Tamamen Ücretsiz</div>
+      <div class="feature-pill"><span class="pip">📴</span> Tam Ekran Mod</div>
+      <div class="feature-pill"><span class="pip">🌙</span> Karanlık Tema</div>
+      <div class="feature-pill"><span class="pip">⚡</span> Hızlı Yükleme</div>
+    </div>
+  </div>
+
+  <!-- ── Footer ── -->
+  <div class="footer">
+    <a href="https://muzik.articnc.online">muzik.articnc.online</a><br>
+    <span>Ücretsiz · Reklamsız · Kayıt Gerektirmez</span>
+  </div>
+
+</div><!-- /#main -->
+
+<script>
+/* ────────────────── Device detection ────────────────── */
+const ua = navigator.userAgent || '';
+const isIOS     = /iPhone|iPad|iPod/i.test(ua);
+const isAndroid = /Android/i.test(ua);
+const isSafari  = /Safari/i.test(ua) && !/Chrome|CriOS|FxiOS|EdgiOS/i.test(ua);
+const isMobile  = isIOS || isAndroid;
+
+/* ────────────────── Splash → main transition ────────────────── */
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    document.getElementById('splash').classList.add('hidden');
+    document.getElementById('main').classList.add('visible');
+    initSections();
+  }, 1600);
+});
+
+/* ────────────────── Show correct section ────────────────── */
+function initSections() {
+  if (isIOS) {
+    document.getElementById('iosSection').classList.add('show');
+
+    // Only hide Safari warning if actually in Safari
+    if (isSafari) {
+      document.getElementById('safariWarn').classList.add('hidden');
+    }
+
+    // Change button text to direct launch
+    const btn = document.getElementById('openBtn');
+    btn.textContent = '🎧 Safari\'de Aç';
+    document.getElementById('openBtnSub').textContent =
+      'Safari açıldıktan sonra Paylaş → Ana Ekrana Ekle';
+
+  } else if (isAndroid) {
+    document.getElementById('androidSection').classList.add('show');
+    const btn = document.getElementById('openBtn');
+    btn.innerHTML = '<span style="font-size:1.2rem">🎧</span> Chrome\'da Aç';
+    document.getElementById('openBtnSub').textContent =
+      'Chrome açıldıktan sonra ⋮ → Ana Ekrana Ekle';
+
+  } else {
+    // Desktop
+    document.getElementById('desktopSection').classList.add('show');
+    document.getElementById('openBtnSub').textContent =
+      'Masaüstünde de kullanabilirsiniz';
+  }
+}
+
+/* ────────────────── iOS: detect if already standalone ────────────────── */
+if (isIOS && window.navigator.standalone === true) {
+  // Already installed — redirect straight to app
+  window.location.replace('https://muzik.articnc.online');
+}
+</script>
+</body>
+</html>
