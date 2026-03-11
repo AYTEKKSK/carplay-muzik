@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Database dosyaları
+*.db
+*.sqlite3
+
+# Log dosyaları
+logs/
+*.log
+error.txt
+output.txt
+
+# Node / Capacitor
+node_modules/
+ios-app/node_modules/
+ios-app/ios/
+ios-app/.gradle/
+
+# Uploads (kullanıcı yüklemeleri repoya girmez)
+uploads/
+
+# Cache
+yt_cache/
+
+# OS
+.DS_Store
+Thumbs.db
