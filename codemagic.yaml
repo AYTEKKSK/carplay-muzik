@@ -5,10 +5,11 @@ workflows:
       vars:
         XCODE_WORKSPACE: "App.xcworkspace"
         XCODE_SCHEME: "App"
+
     scripts:
       - name: Install dependencies
         script: |
-          cd ios-app
+          cd ios-app/ios/App
           pod install
 
       - name: Create export options
