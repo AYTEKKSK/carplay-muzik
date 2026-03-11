@@ -9,27 +9,30 @@ workflows:
     scripts:
       - name: Install dependencies
         script: |
+          cd ios-app
           npm install
-          npm install @capacitor/core @capacitor/cli @capacitor/ios
 
       - name: Add iOS platform
         script: |
+          cd ios-app
           npx cap add ios || true
 
       - name: Sync project
         script: |
-          npx cap sync ios
+          cd ios-app
+          npx cap sync
 
       - name: Install CocoaPods
         script: |
-          cd ios/App
+          cd ios-app/ios/App
           pod install
 
       - name: Build unsigned IPA
         script: |
+          cd ios-app
           xcode-project build-ipa \
             --workspace "ios/App/App.xcworkspace" \
             --scheme "App"
 
     artifacts:
-      - build/ios/ipa/*.ipa
+      - ios-app/build/ios/ipa/*.ipa
