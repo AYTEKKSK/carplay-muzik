@@ -1,0 +1,26 @@
+import { CapacitorConfig } from '@capacitor/cli';
+
+const config: CapacitorConfig = {
+  appId: 'com.articnc.muzik',
+  appName: 'Müzik',
+  webDir: 'www',
+  server: {
+    url: 'https://app.articnc.online/muzik',
+    cleartext: false,
+    androidScheme: 'https'
+  },
+  ios: {
+    backgroundColor: '#0a0a0a',
+    contentInset: 'always',
+    allowsLinkPreview: false,
+    scrollEnabled: true,
+    limitsNavigationsToAppBoundDomains: true
+  },
+  plugins: {
+    SplashScreen: {
+      launchShowDuration: 0
+    }
+  }
+};
+
+export default config;

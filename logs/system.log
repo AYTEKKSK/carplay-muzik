@@ -1,0 +1,611 @@
+2026-02-19 20:40:42,140 - INFO - Uygulama baþlatýldý
+2026-02-19 20:40:43,438 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-02-19 20:40:43,438 - INFO - Added job "check_prayer_times_and_notify" to job store "default"
+2026-02-19 20:40:43,438 - INFO - Scheduler started
+2026-02-19 20:40:43,448 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.20:5000
+2026-02-19 20:40:43,449 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-19 20:40:45,993 - INFO - Request from 127.0.0.1 by Anonymous: GET /müzik [Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac O]
+2026-02-19 20:40:45,994 - WARNING - 404 error: http://app.articnc.online/müzik
+2026-02-19 20:40:46,121 - INFO - Request completed in 0.128s - Status: 404
+2026-02-19 20:40:46,122 - INFO - 127.0.0.1 - - [19/Feb/2026 20:40:46] "[33mGET /müzik HTTP/1.1[0m" 404 -
+2026-02-19 20:40:48,118 - INFO - Request from 127.0.0.1 by Anonymous: GET /müzik [Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac O]
+2026-02-19 20:40:48,119 - WARNING - 404 error: http://app.articnc.online/müzik
+2026-02-19 20:40:48,251 - INFO - Request completed in 0.133s - Status: 404
+2026-02-19 20:40:48,253 - INFO - 127.0.0.1 - - [19/Feb/2026 20:40:48] "[33mGET /müzik HTTP/1.1[0m" 404 -
+2026-02-19 20:41:00,526 - INFO - Request from 127.0.0.1 by Anonymous: GET /music [Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac O]
+2026-02-19 20:41:00,536 - INFO - Request completed in 0.010s - Status: 200
+2026-02-19 20:41:00,536 - INFO - 127.0.0.1 - - [19/Feb/2026 20:41:00] "GET /music HTTP/1.1" 200 -
+2026-02-19 20:41:00,659 - INFO - Request from 127.0.0.1 by Anonymous: GET /api/music/playlists/global [Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac O]
+2026-02-19 20:41:00,661 - INFO - Request completed in 0.001s - Status: 200
+2026-02-19 20:41:00,661 - INFO - 127.0.0.1 - - [19/Feb/2026 20:41:00] "GET /api/music/playlists/global HTTP/1.1" 200 -
+2026-02-19 20:41:00,749 - INFO - Request from 127.0.0.1 by Anonymous: GET /api/music/playlists/1/songs [Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac O]
+2026-02-19 20:41:00,750 - INFO - Request completed in 0.001s - Status: 200
+2026-02-19 20:41:00,750 - INFO - 127.0.0.1 - - [19/Feb/2026 20:41:00] "GET /api/music/playlists/1/songs HTTP/1.1" 200 -
+2026-02-19 20:41:02,492 - INFO - Request from 127.0.0.1 by Anonymous: GET /muzik [Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac O]
+2026-02-19 20:41:04,642 - INFO - Request completed in 2.150s - Status: 200
+2026-02-19 20:41:04,642 - INFO - 127.0.0.1 - - [19/Feb/2026 20:41:04] "GET /muzik HTTP/1.1" 200 -
+2026-02-19 20:41:04,856 - INFO - Request from 127.0.0.1 by Anonymous: GET /muzik/api/music/playlists/global [Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac O]
+2026-02-19 20:41:06,941 - INFO - Request completed in 2.085s - Status: 200
+2026-02-19 20:41:06,942 - INFO - 127.0.0.1 - - [19/Feb/2026 20:41:06] "GET /muzik/api/music/playlists/global HTTP/1.1" 200 -
+2026-02-19 20:41:07,041 - INFO - Request from 127.0.0.1 by Anonymous: GET /muzik/api/music/playlists/1/songs [Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac O]
+2026-02-19 20:41:09,141 - INFO - Request completed in 2.100s - Status: 200
+2026-02-19 20:41:09,141 - INFO - 127.0.0.1 - - [19/Feb/2026 20:41:09] "GET /muzik/api/music/playlists/1/songs HTTP/1.1" 200 -
+2026-02-19 20:41:18,622 - INFO - Request from 127.0.0.1 by Anonymous: POST /muzik/api/music/search [Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac O]
+2026-02-19 20:41:22,887 - INFO - Request completed in 4.264s - Status: 200
+2026-02-19 20:41:22,887 - INFO - 127.0.0.1 - - [19/Feb/2026 20:41:22] "POST /muzik/api/music/search HTTP/1.1" 200 -
+2026-02-19 20:41:39,454 - INFO - Request from 127.0.0.1 by Anonymous: GET /muzik/api/music/playlists/global [Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac O]
+2026-02-19 20:41:41,531 - INFO - Request completed in 2.077s - Status: 200
+2026-02-19 20:41:41,532 - INFO - 127.0.0.1 - - [19/Feb/2026 20:41:41] "GET /muzik/api/music/playlists/global HTTP/1.1" 200 -
+2026-02-19 20:41:41,787 - INFO - Request from 127.0.0.1 by Anonymous: GET /muzik/api/music/playlists/my [Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac O]
+2026-02-19 20:41:43,440 - INFO - Running job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 20:41:43 +03)" (scheduled at 2026-02-19 20:41:43.438304+03:00)
+2026-02-19 20:41:43,445 - INFO - Job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 20:42:43 +03)" executed successfully
+2026-02-19 20:41:43,839 - INFO - Request completed in 2.051s - Status: 200
+2026-02-19 20:41:43,839 - INFO - 127.0.0.1 - - [19/Feb/2026 20:41:43] "GET /muzik/api/music/playlists/my HTTP/1.1" 200 -
+2026-02-19 20:41:46,049 - INFO - Request from 127.0.0.1 by Anonymous: POST /muzik/api/music/playlists/2/add-song [Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac O]
+2026-02-19 20:41:48,341 - INFO - Request completed in 2.292s - Status: 200
+2026-02-19 20:41:48,342 - INFO - 127.0.0.1 - - [19/Feb/2026 20:41:48] "POST /muzik/api/music/playlists/2/add-song HTTP/1.1" 200 -
+2026-02-19 20:42:19,046 - INFO - Request from 127.0.0.1 by Anonymous: GET /muzik/api/music/playlists/global [Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac O]
+2026-02-19 20:42:21,111 - INFO - Request completed in 2.064s - Status: 200
+2026-02-19 20:42:21,111 - INFO - 127.0.0.1 - - [19/Feb/2026 20:42:21] "GET /muzik/api/music/playlists/global HTTP/1.1" 200 -
+2026-02-19 20:42:21,313 - INFO - Request from 127.0.0.1 by Anonymous: GET /muzik/api/music/playlists/my [Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac O]
+2026-02-19 20:42:23,368 - INFO - Request completed in 2.055s - Status: 200
+2026-02-19 20:42:23,369 - INFO - 127.0.0.1 - - [19/Feb/2026 20:42:23] "GET /muzik/api/music/playlists/my HTTP/1.1" 200 -
+2026-02-19 20:42:26,057 - INFO - Request from 127.0.0.1 by Anonymous: POST /muzik/api/music/playlists/2/add-song [Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac O]
+2026-02-19 20:42:28,379 - INFO - Request completed in 2.322s - Status: 200
+2026-02-19 20:42:28,379 - INFO - 127.0.0.1 - - [19/Feb/2026 20:42:28] "POST /muzik/api/music/playlists/2/add-song HTTP/1.1" 200 -
+2026-02-19 20:42:36,644 - INFO - Request from 127.0.0.1 by Anonymous: POST /muzik/api/get-audio-stream [Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac O]
+2026-02-19 20:42:41,170 - INFO - Request completed in 4.525s - Status: 200
+2026-02-19 20:42:41,170 - INFO - 127.0.0.1 - - [19/Feb/2026 20:42:41] "POST /muzik/api/get-audio-stream HTTP/1.1" 200 -
+2026-02-19 20:42:43,448 - INFO - Running job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 20:43:43 +03)" (scheduled at 2026-02-19 20:42:43.438304+03:00)
+2026-02-19 20:42:43,449 - INFO - Job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 20:43:43 +03)" executed successfully
+2026-02-19 20:42:44,462 - INFO - Request from 127.0.0.1 by Anonymous: GET /muzik/api/music/playlists/global [Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac O]
+2026-02-19 20:42:46,514 - INFO - Request completed in 2.051s - Status: 200
+2026-02-19 20:42:46,514 - INFO - 127.0.0.1 - - [19/Feb/2026 20:42:46] "GET /muzik/api/music/playlists/global HTTP/1.1" 200 -
+2026-02-19 20:42:46,611 - INFO - Request from 127.0.0.1 by Anonymous: GET /muzik/api/music/playlists/my [Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac O]
+2026-02-19 20:42:48,673 - INFO - Request completed in 2.061s - Status: 200
+2026-02-19 20:42:48,673 - INFO - 127.0.0.1 - - [19/Feb/2026 20:42:48] "GET /muzik/api/music/playlists/my HTTP/1.1" 200 -
+2026-02-19 20:42:49,969 - INFO - Request from 127.0.0.1 by Anonymous: POST /muzik/api/music/playlists/2/add-song [Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac O]
+2026-02-19 20:42:52,310 - INFO - Request completed in 2.341s - Status: 200
+2026-02-19 20:42:52,311 - INFO - 127.0.0.1 - - [19/Feb/2026 20:42:52] "POST /muzik/api/music/playlists/2/add-song HTTP/1.1" 200 -
+2026-02-19 20:43:43,450 - INFO - Running job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 20:44:43 +03)" (scheduled at 2026-02-19 20:43:43.438304+03:00)
+2026-02-19 20:43:43,451 - INFO - Job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 20:44:43 +03)" executed successfully
+2026-02-19 20:44:43,439 - INFO - Running job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 20:45:43 +03)" (scheduled at 2026-02-19 20:44:43.438304+03:00)
+2026-02-19 20:44:43,440 - INFO - Job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 20:45:43 +03)" executed successfully
+2026-02-19 20:45:03,827 - INFO - Request from 127.0.0.1 by Anonymous: GET /apple-touch-icon.png [NetworkingExtension/8623.1.14.10.9 Network/5569.60]
+2026-02-19 20:45:03,827 - WARNING - 404 error: http://app.articnc.online/apple-touch-icon.png
+2026-02-19 20:45:03,829 - INFO - Request from 127.0.0.1 by Anonymous: GET /apple-touch-icon-precomposed.png [NetworkingExtension/8623.1.14.10.9 Network/5569.60]
+2026-02-19 20:45:03,829 - WARNING - 404 error: http://app.articnc.online/apple-touch-icon-precomposed.png
+2026-02-19 20:45:03,902 - INFO - Request from 127.0.0.1 by Anonymous: GET /static/icon-512.png [NetworkingExtension/8623.1.14.10.9 Network/5569.60]
+2026-02-19 20:45:03,909 - INFO - Request completed in 0.007s - Status: 200
+2026-02-19 20:45:03,909 - INFO - 127.0.0.1 - - [19/Feb/2026 20:45:03] "GET /static/icon-512.png HTTP/1.1" 200 -
+2026-02-19 20:45:03,966 - INFO - Request completed in 0.138s - Status: 404
+2026-02-19 20:45:03,966 - INFO - 127.0.0.1 - - [19/Feb/2026 20:45:03] "[33mGET /apple-touch-icon.png HTTP/1.1[0m" 404 -
+2026-02-19 20:45:04,079 - INFO - Request completed in 0.250s - Status: 404
+2026-02-19 20:45:04,079 - INFO - 127.0.0.1 - - [19/Feb/2026 20:45:04] "[33mGET /apple-touch-icon-precomposed.png HTTP/1.1[0m" 404 -
+2026-02-19 20:45:19,877 - INFO - Request from 127.0.0.1 by Anonymous: GET /music [Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac O]
+2026-02-19 20:45:19,878 - INFO - Request completed in 0.001s - Status: 200
+2026-02-19 20:45:19,878 - INFO - 127.0.0.1 - - [19/Feb/2026 20:45:19] "GET /music?pwa=true HTTP/1.1" 200 -
+2026-02-19 20:45:19,971 - INFO - Request from 127.0.0.1 by Anonymous: GET /static/music-manifest.json [Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac O]
+2026-02-19 20:45:19,972 - INFO - Request completed in 0.001s - Status: 200
+2026-02-19 20:45:19,972 - INFO - 127.0.0.1 - - [19/Feb/2026 20:45:19] "GET /static/music-manifest.json HTTP/1.1" 200 -
+2026-02-19 20:45:20,190 - INFO - Request from 127.0.0.1 by Anonymous: GET /api/music/playlists/global [Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac O]
+2026-02-19 20:45:20,193 - INFO - Request completed in 0.002s - Status: 200
+2026-02-19 20:45:20,193 - INFO - 127.0.0.1 - - [19/Feb/2026 20:45:20] "GET /api/music/playlists/global HTTP/1.1" 200 -
+2026-02-19 20:45:20,287 - INFO - Request from 127.0.0.1 by Anonymous: GET /api/music/playlists/1/songs [Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac O]
+2026-02-19 20:45:20,288 - INFO - Request completed in 0.001s - Status: 200
+2026-02-19 20:45:20,289 - INFO - 127.0.0.1 - - [19/Feb/2026 20:45:20] "GET /api/music/playlists/1/songs HTTP/1.1" 200 -
+2026-02-19 20:45:30,505 - INFO - Request from 127.0.0.1 by Anonymous: GET /music [Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac O]
+2026-02-19 20:45:30,506 - INFO - Request completed in 0.001s - Status: 200
+2026-02-19 20:45:30,506 - INFO - 127.0.0.1 - - [19/Feb/2026 20:45:30] "GET /music?pwa=true HTTP/1.1" 200 -
+2026-02-19 20:45:30,623 - INFO - Request from 127.0.0.1 by Anonymous: GET /api/music/playlists/global [Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac O]
+2026-02-19 20:45:30,624 - INFO - Request completed in 0.001s - Status: 200
+2026-02-19 20:45:30,624 - INFO - 127.0.0.1 - - [19/Feb/2026 20:45:30] "GET /api/music/playlists/global HTTP/1.1" 200 -
+2026-02-19 20:45:30,717 - INFO - Request from 127.0.0.1 by Anonymous: GET /api/music/playlists/1/songs [Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac O]
+2026-02-19 20:45:30,718 - INFO - Request completed in 0.001s - Status: 200
+2026-02-19 20:45:30,719 - INFO - 127.0.0.1 - - [19/Feb/2026 20:45:30] "GET /api/music/playlists/1/songs HTTP/1.1" 200 -
+2026-02-19 20:45:43,270 - INFO - Request from 127.0.0.1 by Anonymous: POST /api/music/init-default-playlists [Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac O]
+2026-02-19 20:45:43,272 - INFO - Request completed in 0.002s - Status: 200
+2026-02-19 20:45:43,273 - INFO - 127.0.0.1 - - [19/Feb/2026 20:45:43] "POST /api/music/init-default-playlists HTTP/1.1" 200 -
+2026-02-19 20:45:43,366 - INFO - Request from 127.0.0.1 by Anonymous: GET /api/music/playlists/global [Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac O]
+2026-02-19 20:45:43,368 - INFO - Request completed in 0.001s - Status: 200
+2026-02-19 20:45:43,368 - INFO - 127.0.0.1 - - [19/Feb/2026 20:45:43] "GET /api/music/playlists/global HTTP/1.1" 200 -
+2026-02-19 20:45:43,450 - INFO - Running job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 20:46:43 +03)" (scheduled at 2026-02-19 20:45:43.438304+03:00)
+2026-02-19 20:45:43,451 - INFO - Job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 20:46:43 +03)" executed successfully
+2026-02-19 20:45:43,464 - INFO - Request from 127.0.0.1 by Anonymous: GET /api/music/playlists/my [Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac O]
+2026-02-19 20:45:43,464 - INFO - Request completed in 0.001s - Status: 200
+2026-02-19 20:45:43,465 - INFO - 127.0.0.1 - - [19/Feb/2026 20:45:43] "GET /api/music/playlists/my HTTP/1.1" 200 -
+2026-02-19 20:45:44,982 - INFO - Request from 127.0.0.1 by Anonymous: GET /api/music/playlists/3/songs [Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac O]
+2026-02-19 20:45:44,983 - INFO - Request completed in 0.001s - Status: 200
+2026-02-19 20:45:44,983 - INFO - 127.0.0.1 - - [19/Feb/2026 20:45:44] "GET /api/music/playlists/3/songs HTTP/1.1" 200 -
+2026-02-19 20:45:47,123 - INFO - Request from 127.0.0.1 by Anonymous: POST /api/get-audio-stream [Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac O]
+2026-02-19 20:45:49,769 - INFO - Request completed in 2.646s - Status: 200
+2026-02-19 20:45:49,769 - INFO - 127.0.0.1 - - [19/Feb/2026 20:45:49] "POST /api/get-audio-stream HTTP/1.1" 200 -
+2026-02-19 20:45:55,172 - INFO - Request from 127.0.0.1 by Anonymous: GET /api/music/playlists/1/songs [Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac O]
+2026-02-19 20:45:55,173 - INFO - Request completed in 0.001s - Status: 200
+2026-02-19 20:45:55,174 - INFO - 127.0.0.1 - - [19/Feb/2026 20:45:55] "GET /api/music/playlists/1/songs HTTP/1.1" 200 -
+2026-02-19 20:46:43,449 - INFO - Running job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 20:47:43 +03)" (scheduled at 2026-02-19 20:46:43.438304+03:00)
+2026-02-19 20:46:43,450 - INFO - Job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 20:47:43 +03)" executed successfully
+2026-02-19 20:46:44,730 - INFO - Request from 127.0.0.1 by Anonymous: GET /music [WhatsApp/2.23.20.0]
+2026-02-19 20:46:44,731 - INFO - Request completed in 0.001s - Status: 200
+2026-02-19 20:46:44,731 - INFO - 127.0.0.1 - - [19/Feb/2026 20:46:44] "GET /music?pwa=true HTTP/1.1" 200 -
+2026-02-19 20:47:14,682 - INFO - Request from 127.0.0.1 by Anonymous: GET /music [WhatsApp/2.23.20.0]
+2026-02-19 20:47:14,683 - INFO - Request completed in 0.001s - Status: 200
+2026-02-19 20:47:14,684 - INFO - 127.0.0.1 - - [19/Feb/2026 20:47:14] "GET /music?pwa=true HTTP/1.1" 200 -
+2026-02-19 20:47:21,564 - INFO - Request from 127.0.0.1 by Anonymous: GET /exchange [Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac O]
+2026-02-19 20:47:21,571 - INFO - Request completed in 0.007s - Status: 200
+2026-02-19 20:47:21,572 - INFO - 127.0.0.1 - - [19/Feb/2026 20:47:21] "GET /exchange HTTP/1.1" 200 -
+2026-02-19 20:47:21,713 - INFO - Request from 127.0.0.1 by Anonymous: GET /api/favorites [Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac O]
+2026-02-19 20:47:21,714 - INFO - Request from 127.0.0.1 by Anonymous: GET /api/exchange-rates [Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac O]
+2026-02-19 20:47:21,714 - INFO - Request completed in 0.001s - Status: 200
+2026-02-19 20:47:21,715 - INFO - 127.0.0.1 - - [19/Feb/2026 20:47:21] "GET /api/favorites HTTP/1.1" 200 -
+2026-02-19 20:47:21,715 - ERROR - Exception on /api/exchange-rates [GET]
+Traceback (most recent call last):
+  File "C:\visualdeneme\.venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\visualdeneme\.venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\visualdeneme\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\visualdeneme\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "d:\yazilimyedekler\visualdeneme15\api_routes.py", line 19, in decorated_function
+    return f(*args, **kwargs)
+  File "d:\yazilimyedekler\visualdeneme15\api_routes.py", line 1269, in api_exchange_rates
+    'lastUpdate': datetime.now().isoformat(),
+                  ^^^^^^^^
+NameError: name 'datetime' is not defined. Did you forget to import 'datetime'?
+2026-02-19 20:47:21,719 - ERROR - 500 error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+2026-02-19 20:47:21,862 - INFO - Request completed in 0.148s - Status: 500
+2026-02-19 20:47:21,862 - INFO - 127.0.0.1 - - [19/Feb/2026 20:47:21] "[35m[1mGET /api/exchange-rates HTTP/1.1[0m" 500 -
+2026-02-19 20:47:21,872 - ERROR - Error on request:
+Traceback (most recent call last):
+  File "C:\visualdeneme\.venv\Lib\site-packages\werkzeug\serving.py", line 370, in run_wsgi
+    execute(self.server.app)
+    ~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\visualdeneme\.venv\Lib\site-packages\werkzeug\serving.py", line 331, in execute
+    application_iter = app(environ, start_response)
+  File "C:\visualdeneme\.venv\Lib\site-packages\flask\app.py", line 1536, in __call__
+    return self.wsgi_app(environ, start_response)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\visualdeneme\.venv\Lib\site-packages\flask\app.py", line 1527, in wsgi_app
+    ctx.pop(error)
+    ~~~~~~~^^^^^^^
+  File "C:\visualdeneme\.venv\Lib\site-packages\flask\ctx.py", line 426, in pop
+    app_ctx.pop(exc)
+    ~~~~~~~~~~~^^^^^
+  File "C:\visualdeneme\.venv\Lib\site-packages\flask\ctx.py", line 262, in pop
+    self.app.do_teardown_appcontext(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\visualdeneme\.venv\Lib\site-packages\flask\app.py", line 1382, in do_teardown_appcontext
+    self.ensure_sync(func)(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "d:\yazilimyedekler\visualdeneme15\log_middleware.py", line 104, in teardown
+    error_details=f'Path: {request.path}',
+                           ^^^^^^^^^^^^
+  File "C:\visualdeneme\.venv\Lib\site-packages\werkzeug\local.py", line 318, in __get__
+    obj = instance._get_current_object()
+  File "C:\visualdeneme\.venv\Lib\site-packages\werkzeug\local.py", line 519, in _get_current_object
+    raise RuntimeError(unbound_message) from None
+RuntimeError: Working outside of request context.
+
+This typically means that you attempted to use functionality that needed
+an active HTTP request. Consult the documentation on testing for
+information about how to avoid this problem.
+2026-02-19 20:47:25,192 - INFO - Request from 127.0.0.1 by Anonymous: GET /prayer-times [Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac O]
+2026-02-19 20:47:25,199 - INFO - Request completed in 0.007s - Status: 200
+2026-02-19 20:47:25,199 - INFO - 127.0.0.1 - - [19/Feb/2026 20:47:25] "GET /prayer-times HTTP/1.1" 200 -
+2026-02-19 20:47:25,327 - INFO - Request from 127.0.0.1 by Anonymous: GET /api/prayer-times [Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac O]
+2026-02-19 20:47:26,141 - INFO - Request completed in 0.814s - Status: 200
+2026-02-19 20:47:26,141 - INFO - 127.0.0.1 - - [19/Feb/2026 20:47:26] "GET /api/prayer-times?lat=40.25328182594043&lon=28.93468551876014&date=2026-02-19 HTTP/1.1" 200 -
+2026-02-19 20:47:26,240 - INFO - Request from 127.0.0.1 by Anonymous: GET /api/prayer-times [Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac O]
+2026-02-19 20:47:26,241 - INFO - Request from 127.0.0.1 by Anonymous: GET /api/prayer-times [Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac O]
+2026-02-19 20:47:26,829 - INFO - Request completed in 0.589s - Status: 200
+2026-02-19 20:47:26,829 - INFO - 127.0.0.1 - - [19/Feb/2026 20:47:26] "GET /api/prayer-times?lat=40.25328182594043&lon=28.93468551876014&date=2026-02-20 HTTP/1.1" 200 -
+2026-02-19 20:47:26,873 - INFO - Request completed in 0.633s - Status: 200
+2026-02-19 20:47:26,874 - INFO - 127.0.0.1 - - [19/Feb/2026 20:47:26] "GET /api/prayer-times?lat=40.25328182594043&lon=28.93468551876014&date=2026-02-19 HTTP/1.1" 200 -
+2026-02-19 20:47:26,967 - INFO - Request from 127.0.0.1 by Anonymous: GET /api/prayer-times [Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac O]
+2026-02-19 20:47:27,691 - INFO - Request completed in 0.724s - Status: 200
+2026-02-19 20:47:27,691 - INFO - 127.0.0.1 - - [19/Feb/2026 20:47:27] "GET /api/prayer-times?lat=40.25328182594043&lon=28.93468551876014&date=2026-02-20 HTTP/1.1" 200 -
+2026-02-19 20:47:43,448 - INFO - Running job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 20:48:43 +03)" (scheduled at 2026-02-19 20:47:43.438304+03:00)
+2026-02-19 20:47:43,450 - INFO - Job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 20:48:43 +03)" executed successfully
+2026-02-19 20:48:04,527 - INFO - Request from 127.0.0.1 by Anonymous: GET /music [Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac O]
+2026-02-19 20:48:04,528 - INFO - Request completed in 0.001s - Status: 200
+2026-02-19 20:48:04,528 - INFO - 127.0.0.1 - - [19/Feb/2026 20:48:04] "GET /music?pwa=true HTTP/1.1" 200 -
+2026-02-19 20:48:04,666 - INFO - Request from 127.0.0.1 by Anonymous: GET /api/music/playlists/global [Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac O]
+2026-02-19 20:48:04,667 - INFO - Request completed in 0.001s - Status: 200
+2026-02-19 20:48:04,668 - INFO - 127.0.0.1 - - [19/Feb/2026 20:48:04] "GET /api/music/playlists/global HTTP/1.1" 200 -
+2026-02-19 20:48:04,769 - INFO - Request from 127.0.0.1 by Anonymous: GET /api/music/playlists/1/songs [Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac O]
+2026-02-19 20:48:04,770 - INFO - Request completed in 0.001s - Status: 200
+2026-02-19 20:48:04,770 - INFO - 127.0.0.1 - - [19/Feb/2026 20:48:04] "GET /api/music/playlists/1/songs HTTP/1.1" 200 -
+2026-02-19 20:48:06,807 - INFO - Request from 127.0.0.1 by Anonymous: POST /api/music/init-default-playlists [Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac O]
+2026-02-19 20:48:06,807 - INFO - Request completed in 0.001s - Status: 200
+2026-02-19 20:48:06,808 - INFO - 127.0.0.1 - - [19/Feb/2026 20:48:06] "POST /api/music/init-default-playlists HTTP/1.1" 200 -
+2026-02-19 20:48:06,892 - INFO - Request from 127.0.0.1 by Anonymous: POST /api/get-audio-stream [Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac O]
+2026-02-19 20:48:06,947 - INFO - Request from 127.0.0.1 by Anonymous: GET /api/music/playlists/global [Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac O]
+2026-02-19 20:48:06,948 - INFO - Request completed in 0.001s - Status: 200
+2026-02-19 20:48:06,950 - INFO - 127.0.0.1 - - [19/Feb/2026 20:48:06] "GET /api/music/playlists/global HTTP/1.1" 200 -
+2026-02-19 20:48:07,051 - INFO - Request from 127.0.0.1 by Anonymous: GET /api/music/playlists/my [Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac O]
+2026-02-19 20:48:07,052 - INFO - Request completed in 0.001s - Status: 200
+2026-02-19 20:48:07,052 - INFO - 127.0.0.1 - - [19/Feb/2026 20:48:07] "GET /api/music/playlists/my HTTP/1.1" 200 -
+2026-02-19 20:48:08,552 - INFO - Request completed in 1.659s - Status: 200
+2026-02-19 20:48:08,552 - INFO - 127.0.0.1 - - [19/Feb/2026 20:48:08] "POST /api/get-audio-stream HTTP/1.1" 200 -
+2026-02-19 20:48:09,417 - INFO - Request from 127.0.0.1 by Anonymous: GET /api/music/playlists/4/songs [Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac O]
+2026-02-19 20:48:09,418 - INFO - Request completed in 0.001s - Status: 200
+2026-02-19 20:48:09,418 - INFO - 127.0.0.1 - - [19/Feb/2026 20:48:09] "GET /api/music/playlists/4/songs HTTP/1.1" 200 -
+2026-02-19 20:48:21,138 - INFO - Request from 127.0.0.1 by Anonymous: GET /prayer-times [Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac O]
+2026-02-19 20:48:21,139 - INFO - Request completed in 0.001s - Status: 200
+2026-02-19 20:48:21,139 - INFO - 127.0.0.1 - - [19/Feb/2026 20:48:21] "GET /prayer-times HTTP/1.1" 200 -
+2026-02-19 20:48:21,287 - INFO - Request from 127.0.0.1 by Anonymous: GET /api/prayer-times [Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac O]
+2026-02-19 20:48:22,266 - INFO - Request completed in 0.979s - Status: 200
+2026-02-19 20:48:22,267 - INFO - 127.0.0.1 - - [19/Feb/2026 20:48:22] "GET /api/prayer-times?lat=40.253273722781856&lon=28.93462756795789&date=2026-02-19 HTTP/1.1" 200 -
+2026-02-19 20:48:22,366 - INFO - Request from 127.0.0.1 by Anonymous: GET /api/prayer-times [Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac O]
+2026-02-19 20:48:22,366 - INFO - Request from 127.0.0.1 by Anonymous: GET /api/prayer-times [Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac O]
+2026-02-19 20:48:23,030 - INFO - Request completed in 0.665s - Status: 200
+2026-02-19 20:48:23,031 - INFO - 127.0.0.1 - - [19/Feb/2026 20:48:23] "GET /api/prayer-times?lat=40.253273722781856&lon=28.93462756795789&date=2026-02-19 HTTP/1.1" 200 -
+2026-02-19 20:48:23,080 - INFO - Request completed in 0.714s - Status: 200
+2026-02-19 20:48:23,080 - INFO - 127.0.0.1 - - [19/Feb/2026 20:48:23] "GET /api/prayer-times?lat=40.253273722781856&lon=28.93462756795789&date=2026-02-20 HTTP/1.1" 200 -
+2026-02-19 20:48:23,129 - INFO - Request from 127.0.0.1 by Anonymous: GET /api/prayer-times [Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac O]
+2026-02-19 20:48:23,791 - INFO - Request completed in 0.662s - Status: 200
+2026-02-19 20:48:23,791 - INFO - 127.0.0.1 - - [19/Feb/2026 20:48:23] "GET /api/prayer-times?lat=40.253273722781856&lon=28.93462756795789&date=2026-02-20 HTTP/1.1" 200 -
+2026-02-19 20:48:43,439 - INFO - Running job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 20:49:43 +03)" (scheduled at 2026-02-19 20:48:43.438304+03:00)
+2026-02-19 20:48:43,440 - INFO - Job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 20:49:43 +03)" executed successfully
+2026-02-19 20:49:43,447 - INFO - Running job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 20:50:43 +03)" (scheduled at 2026-02-19 20:49:43.438304+03:00)
+2026-02-19 20:49:43,448 - INFO - Job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 20:50:43 +03)" executed successfully
+2026-02-19 20:49:58,151 - INFO - Request from 127.0.0.1 by Anonymous: GET /music [Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537]
+2026-02-19 20:49:58,152 - INFO - Request completed in 0.001s - Status: 200
+2026-02-19 20:49:58,152 - INFO - 127.0.0.1 - - [19/Feb/2026 20:49:58] "GET /music?pwa=true HTTP/1.1" 200 -
+2026-02-19 20:49:58,825 - INFO - Request from 127.0.0.1 by Anonymous: GET /api/music/playlists/global [Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537]
+2026-02-19 20:49:58,826 - INFO - Request completed in 0.001s - Status: 200
+2026-02-19 20:49:58,827 - INFO - 127.0.0.1 - - [19/Feb/2026 20:49:58] "GET /api/music/playlists/global HTTP/1.1" 200 -
+2026-02-19 20:49:58,928 - INFO - Request from 127.0.0.1 by Anonymous: GET /api/music/playlists/1/songs [Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537]
+2026-02-19 20:49:58,930 - INFO - Request completed in 0.001s - Status: 200
+2026-02-19 20:49:58,930 - INFO - 127.0.0.1 - - [19/Feb/2026 20:49:58] "GET /api/music/playlists/1/songs HTTP/1.1" 200 -
+2026-02-19 20:49:59,703 - INFO - Request from 127.0.0.1 by Anonymous: GET /static/music-manifest.json [Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537]
+2026-02-19 20:49:59,704 - INFO - Request completed in 0.001s - Status: 200
+2026-02-19 20:49:59,704 - INFO - 127.0.0.1 - - [19/Feb/2026 20:49:59] "GET /static/music-manifest.json HTTP/1.1" 200 -
+2026-02-19 20:50:09,643 - INFO - Request from 127.0.0.1 by Anonymous: GET /music [Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/53]
+2026-02-19 20:50:09,644 - INFO - Request completed in 0.001s - Status: 200
+2026-02-19 20:50:09,644 - INFO - 127.0.0.1 - - [19/Feb/2026 20:50:09] "GET /music?pwa=true HTTP/1.1" 200 -
+2026-02-19 20:50:19,704 - INFO - Request from 127.0.0.1 by Anonymous: GET /music [Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/53]
+2026-02-19 20:50:19,705 - INFO - Request completed in 0.001s - Status: 200
+2026-02-19 20:50:19,705 - INFO - 127.0.0.1 - - [19/Feb/2026 20:50:19] "GET /music?pwa=true HTTP/1.1" 200 -
+2026-02-19 20:50:25,404 - INFO - Request from 127.0.0.1 by Anonymous: GET /music [Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/53]
+2026-02-19 20:50:25,405 - INFO - Request completed in 0.001s - Status: 200
+2026-02-19 20:50:25,405 - INFO - 127.0.0.1 - - [19/Feb/2026 20:50:25] "GET /music?pwa=true HTTP/1.1" 200 -
+2026-02-19 20:50:43,447 - INFO - Running job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 20:51:43 +03)" (scheduled at 2026-02-19 20:50:43.438304+03:00)
+2026-02-19 20:50:43,448 - INFO - Job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 20:51:43 +03)" executed successfully
+2026-02-19 20:51:16,392 - INFO - Request from 127.0.0.1 by Anonymous: GET /.well-known/assetlinks.json [GoogleAssociationService]
+2026-02-19 20:51:16,393 - WARNING - 404 error: http://app.articnc.online/.well-known/assetlinks.json
+2026-02-19 20:51:16,500 - INFO - Request from 127.0.0.1 by Anonymous: GET /.well-known/assetlinks.json [GoogleAssociationService]
+2026-02-19 20:51:16,500 - WARNING - 404 error: http://app.articnc.online/.well-known/assetlinks.json
+2026-02-19 20:51:16,583 - INFO - Request completed in 0.191s - Status: 404
+2026-02-19 20:51:16,583 - INFO - 127.0.0.1 - - [19/Feb/2026 20:51:16] "[33mGET /.well-known/assetlinks.json HTTP/1.1[0m" 404 -
+2026-02-19 20:51:16,738 - INFO - Request completed in 0.238s - Status: 404
+2026-02-19 20:51:16,739 - INFO - 127.0.0.1 - - [19/Feb/2026 20:51:16] "[33mGET /.well-known/assetlinks.json HTTP/1.1[0m" 404 -
+2026-02-19 20:51:23,690 - INFO - Request from 127.0.0.1 by Anonymous: GET /music [Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537]
+2026-02-19 20:51:23,691 - INFO - Request completed in 0.001s - Status: 200
+2026-02-19 20:51:23,691 - INFO - 127.0.0.1 - - [19/Feb/2026 20:51:23] "GET /music?pwa=true HTTP/1.1" 200 -
+2026-02-19 20:51:24,133 - INFO - Request from 127.0.0.1 by Anonymous: GET /api/music/playlists/global [Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537]
+2026-02-19 20:51:24,135 - INFO - Request completed in 0.001s - Status: 200
+2026-02-19 20:51:24,135 - INFO - 127.0.0.1 - - [19/Feb/2026 20:51:24] "GET /api/music/playlists/global HTTP/1.1" 200 -
+2026-02-19 20:51:24,273 - INFO - Request from 127.0.0.1 by Anonymous: GET /api/music/playlists/1/songs [Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537]
+2026-02-19 20:51:24,275 - INFO - Request completed in 0.001s - Status: 200
+2026-02-19 20:51:24,275 - INFO - 127.0.0.1 - - [19/Feb/2026 20:51:24] "GET /api/music/playlists/1/songs HTTP/1.1" 200 -
+2026-02-19 20:51:26,165 - INFO - Request from 127.0.0.1 by Anonymous: POST /api/music/init-default-playlists [Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537]
+2026-02-19 20:51:26,165 - INFO - Request completed in 0.001s - Status: 200
+2026-02-19 20:51:26,166 - INFO - 127.0.0.1 - - [19/Feb/2026 20:51:26] "POST /api/music/init-default-playlists HTTP/1.1" 200 -
+2026-02-19 20:51:26,263 - INFO - Request from 127.0.0.1 by Anonymous: GET /api/music/playlists/global [Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537]
+2026-02-19 20:51:26,264 - INFO - Request completed in 0.001s - Status: 200
+2026-02-19 20:51:26,265 - INFO - 127.0.0.1 - - [19/Feb/2026 20:51:26] "GET /api/music/playlists/global HTTP/1.1" 200 -
+2026-02-19 20:51:26,369 - INFO - Request from 127.0.0.1 by Anonymous: GET /api/music/playlists/my [Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537]
+2026-02-19 20:51:26,370 - INFO - Request completed in 0.001s - Status: 200
+2026-02-19 20:51:26,370 - INFO - 127.0.0.1 - - [19/Feb/2026 20:51:26] "GET /api/music/playlists/my HTTP/1.1" 200 -
+2026-02-19 20:51:27,491 - INFO - Request from 127.0.0.1 by Anonymous: GET /api/music/playlists/4/songs [Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537]
+2026-02-19 20:51:27,492 - INFO - Request completed in 0.001s - Status: 200
+2026-02-19 20:51:27,492 - INFO - 127.0.0.1 - - [19/Feb/2026 20:51:27] "GET /api/music/playlists/4/songs HTTP/1.1" 200 -
+2026-02-19 20:51:28,600 - INFO - Request from 127.0.0.1 by Anonymous: POST /api/get-audio-stream [Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537]
+2026-02-19 20:51:30,367 - INFO - Request completed in 1.766s - Status: 200
+2026-02-19 20:51:30,367 - INFO - 127.0.0.1 - - [19/Feb/2026 20:51:30] "POST /api/get-audio-stream HTTP/1.1" 200 -
+2026-02-19 20:51:33,913 - INFO - Request from 127.0.0.1 by Anonymous: GET /music [Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537]
+2026-02-19 20:51:33,914 - INFO - Request completed in 0.001s - Status: 200
+2026-02-19 20:51:33,915 - INFO - 127.0.0.1 - - [19/Feb/2026 20:51:33] "GET /music?pwa=true HTTP/1.1" 200 -
+2026-02-19 20:51:34,070 - INFO - Request from 127.0.0.1 by Anonymous: GET /api/music/playlists/global [Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537]
+2026-02-19 20:51:34,071 - INFO - Request completed in 0.001s - Status: 200
+2026-02-19 20:51:34,071 - INFO - 127.0.0.1 - - [19/Feb/2026 20:51:34] "GET /api/music/playlists/global HTTP/1.1" 200 -
+2026-02-19 20:51:34,179 - INFO - Request from 127.0.0.1 by Anonymous: GET /api/music/playlists/1/songs [Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537]
+2026-02-19 20:51:34,180 - INFO - Request completed in 0.001s - Status: 200
+2026-02-19 20:51:34,180 - INFO - 127.0.0.1 - - [19/Feb/2026 20:51:34] "GET /api/music/playlists/1/songs HTTP/1.1" 200 -
+2026-02-19 20:51:36,354 - INFO - Request from 127.0.0.1 by Anonymous: POST /api/get-audio-stream [Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537]
+2026-02-19 20:51:37,932 - INFO - Request completed in 1.578s - Status: 200
+2026-02-19 20:51:37,933 - INFO - 127.0.0.1 - - [19/Feb/2026 20:51:37] "POST /api/get-audio-stream HTTP/1.1" 200 -
+2026-02-19 20:51:43,447 - INFO - Running job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 20:52:43 +03)" (scheduled at 2026-02-19 20:51:43.438304+03:00)
+2026-02-19 20:51:43,448 - INFO - Job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 20:52:43 +03)" executed successfully
+2026-02-19 20:51:45,918 - INFO - Request from 127.0.0.1 by Anonymous: POST /api/music/init-default-playlists [Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537]
+2026-02-19 20:51:45,919 - INFO - Request completed in 0.001s - Status: 200
+2026-02-19 20:51:45,920 - INFO - 127.0.0.1 - - [19/Feb/2026 20:51:45] "POST /api/music/init-default-playlists HTTP/1.1" 200 -
+2026-02-19 20:51:46,058 - INFO - Request from 127.0.0.1 by Anonymous: GET /api/music/playlists/global [Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537]
+2026-02-19 20:51:46,059 - INFO - Request completed in 0.001s - Status: 200
+2026-02-19 20:51:46,060 - INFO - 127.0.0.1 - - [19/Feb/2026 20:51:46] "GET /api/music/playlists/global HTTP/1.1" 200 -
+2026-02-19 20:51:46,179 - INFO - Request from 127.0.0.1 by Anonymous: GET /api/music/playlists/my [Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537]
+2026-02-19 20:51:46,180 - INFO - Request completed in 0.001s - Status: 200
+2026-02-19 20:51:46,181 - INFO - 127.0.0.1 - - [19/Feb/2026 20:51:46] "GET /api/music/playlists/my HTTP/1.1" 200 -
+2026-02-19 20:51:47,523 - INFO - Request from 127.0.0.1 by Anonymous: GET /api/music/playlists/4/songs [Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537]
+2026-02-19 20:51:47,524 - INFO - Request completed in 0.001s - Status: 200
+2026-02-19 20:51:47,524 - INFO - 127.0.0.1 - - [19/Feb/2026 20:51:47] "GET /api/music/playlists/4/songs HTTP/1.1" 200 -
+2026-02-19 20:51:50,700 - INFO - Request from 127.0.0.1 by Anonymous: GET /api/music/playlists/3/songs [Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537]
+2026-02-19 20:51:50,701 - INFO - Request completed in 0.001s - Status: 200
+2026-02-19 20:51:50,701 - INFO - 127.0.0.1 - - [19/Feb/2026 20:51:50] "GET /api/music/playlists/3/songs HTTP/1.1" 200 -
+2026-02-19 20:51:51,908 - INFO - Request from 127.0.0.1 by Anonymous: POST /api/get-audio-stream [Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537]
+2026-02-19 20:51:53,587 - INFO - Request completed in 1.679s - Status: 200
+2026-02-19 20:51:53,587 - INFO - 127.0.0.1 - - [19/Feb/2026 20:51:53] "POST /api/get-audio-stream HTTP/1.1" 200 -
+2026-02-19 20:52:43,445 - INFO - Running job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 20:53:43 +03)" (scheduled at 2026-02-19 20:52:43.438304+03:00)
+2026-02-19 20:52:43,446 - INFO - Job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 20:53:43 +03)" executed successfully
+2026-02-19 20:53:43,445 - INFO - Running job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 20:54:43 +03)" (scheduled at 2026-02-19 20:53:43.438304+03:00)
+2026-02-19 20:53:43,446 - INFO - Job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 20:54:43 +03)" executed successfully
+2026-02-19 20:54:43,444 - INFO - Running job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 20:55:43 +03)" (scheduled at 2026-02-19 20:54:43.438304+03:00)
+2026-02-19 20:54:43,445 - INFO - Job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 20:55:43 +03)" executed successfully
+2026-02-19 20:55:25,025 - INFO - Request from 127.0.0.1 by Anonymous: POST /api/music/init-default-playlists [Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537]
+2026-02-19 20:55:25,026 - INFO - Request completed in 0.001s - Status: 200
+2026-02-19 20:55:25,026 - INFO - 127.0.0.1 - - [19/Feb/2026 20:55:25] "POST /api/music/init-default-playlists HTTP/1.1" 200 -
+2026-02-19 20:55:25,170 - INFO - Request from 127.0.0.1 by Anonymous: GET /api/music/playlists/global [Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537]
+2026-02-19 20:55:25,171 - INFO - Request completed in 0.001s - Status: 200
+2026-02-19 20:55:25,172 - INFO - 127.0.0.1 - - [19/Feb/2026 20:55:25] "GET /api/music/playlists/global HTTP/1.1" 200 -
+2026-02-19 20:55:25,331 - INFO - Request from 127.0.0.1 by Anonymous: GET /api/music/playlists/my [Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537]
+2026-02-19 20:55:25,332 - INFO - Request completed in 0.001s - Status: 200
+2026-02-19 20:55:25,332 - INFO - 127.0.0.1 - - [19/Feb/2026 20:55:25] "GET /api/music/playlists/my HTTP/1.1" 200 -
+2026-02-19 20:55:31,415 - INFO - Request from 127.0.0.1 by Anonymous: GET /api/music/playlists/2/songs [Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537]
+2026-02-19 20:55:31,416 - INFO - Request completed in 0.001s - Status: 200
+2026-02-19 20:55:31,416 - INFO - 127.0.0.1 - - [19/Feb/2026 20:55:31] "GET /api/music/playlists/2/songs HTTP/1.1" 200 -
+2026-02-19 20:55:38,630 - INFO - Request from 127.0.0.1 by Anonymous: POST /api/get-audio-stream [Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537]
+2026-02-19 20:55:40,231 - INFO - Request completed in 1.601s - Status: 200
+2026-02-19 20:55:40,232 - INFO - 127.0.0.1 - - [19/Feb/2026 20:55:40] "POST /api/get-audio-stream HTTP/1.1" 200 -
+2026-02-19 20:55:43,444 - INFO - Running job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 20:56:43 +03)" (scheduled at 2026-02-19 20:55:43.438304+03:00)
+2026-02-19 20:55:43,445 - INFO - Job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 20:56:43 +03)" executed successfully
+2026-02-19 20:56:43,443 - INFO - Running job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 20:57:43 +03)" (scheduled at 2026-02-19 20:56:43.438304+03:00)
+2026-02-19 20:56:43,444 - INFO - Job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 20:57:43 +03)" executed successfully
+2026-02-19 20:57:43,443 - INFO - Running job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 20:58:43 +03)" (scheduled at 2026-02-19 20:57:43.438304+03:00)
+2026-02-19 20:57:43,444 - INFO - Job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 20:58:43 +03)" executed successfully
+2026-02-19 20:58:25,621 - INFO - Request from 127.0.0.1 by Anonymous: POST /api/music/search [Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537]
+2026-02-19 20:58:25,720 - INFO - Request from 127.0.0.1 by Anonymous: GET /akilli_navigasyon2 [Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537]
+2026-02-19 20:58:25,747 - INFO - ============================================================
+2026-02-19 20:58:25,773 - INFO - Request completed in 0.053s - Status: 200
+2026-02-19 20:58:25,774 - INFO - 127.0.0.1 - - [19/Feb/2026 20:58:25] "GET /akilli_navigasyon2 HTTP/1.1" 200 -
+2026-02-19 20:58:27,000 - INFO - Request completed in 1.380s - Status: 200
+2026-02-19 20:58:27,001 - INFO - 127.0.0.1 - - [19/Feb/2026 20:58:27] "POST /api/music/search HTTP/1.1" 200 -
+2026-02-19 20:58:33,681 - INFO - Request from 127.0.0.1 by Anonymous: POST /api/get-audio-stream [Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537]
+2026-02-19 20:58:35,164 - INFO - Request from 127.0.0.1 by Anonymous: POST /api/navigation/log [Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537]
+2026-02-19 20:58:35,164 - INFO - Request completed in 1.483s - Status: 200
+2026-02-19 20:58:35,165 - INFO - 127.0.0.1 - - [19/Feb/2026 20:58:35] "POST /api/get-audio-stream HTTP/1.1" 200 -
+2026-02-19 20:58:35,169 - INFO - Request completed in 0.005s - Status: 200
+2026-02-19 20:58:35,169 - INFO - 127.0.0.1 - - [19/Feb/2026 20:58:35] "POST /api/navigation/log HTTP/1.1" 200 -
+2026-02-19 20:58:35,451 - INFO - Request from 127.0.0.1 by Anonymous: GET /static/sw.js [Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537]
+2026-02-19 20:58:35,451 - INFO - Request completed in 0.001s - Status: 200
+2026-02-19 20:58:35,452 - INFO - 127.0.0.1 - - [19/Feb/2026 20:58:35] "GET /static/sw.js?v=1.4 HTTP/1.1" 200 -
+2026-02-19 20:58:35,546 - INFO - Request from 127.0.0.1 by Anonymous: GET /static/gps-manifest.json [Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537]
+2026-02-19 20:58:35,558 - INFO - Request completed in 0.012s - Status: 200
+2026-02-19 20:58:35,559 - INFO - 127.0.0.1 - - [19/Feb/2026 20:58:35] "GET /static/gps-manifest.json HTTP/1.1" 200 -
+2026-02-19 20:58:35,580 - INFO - Request from 127.0.0.1 by Anonymous: GET /static/navigation-icon-192.png [Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537]
+2026-02-19 20:58:35,595 - INFO - Request completed in 0.015s - Status: 200
+2026-02-19 20:58:35,596 - INFO - 127.0.0.1 - - [19/Feb/2026 20:58:35] "GET /static/navigation-icon-192.png HTTP/1.1" 200 -
+2026-02-19 20:58:35,729 - INFO - Request from 127.0.0.1 by Anonymous: GET /static/navigation-icon-512.png [Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537]
+2026-02-19 20:58:35,737 - INFO - Request completed in 0.008s - Status: 200
+2026-02-19 20:58:35,737 - INFO - 127.0.0.1 - - [19/Feb/2026 20:58:35] "GET /static/navigation-icon-512.png HTTP/1.1" 200 -
+2026-02-19 20:58:35,741 - INFO - Request from 127.0.0.1 by Anonymous: GET /dashboard [Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537]
+2026-02-19 20:58:35,754 - INFO - Request completed in 0.013s - Status: 200
+2026-02-19 20:58:35,754 - INFO - 127.0.0.1 - - [19/Feb/2026 20:58:35] "GET /dashboard HTTP/1.1" 200 -
+2026-02-19 20:58:35,962 - INFO - Request from 127.0.0.1 by Anonymous: GET /news [Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537]
+2026-02-19 20:58:35,967 - INFO - Request completed in 0.005s - Status: 200
+2026-02-19 20:58:35,967 - INFO - 127.0.0.1 - - [19/Feb/2026 20:58:35] "GET /news HTTP/1.1" 200 -
+2026-02-19 20:58:36,092 - INFO - Request from 127.0.0.1 by Anonymous: GET /weather [Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537]
+2026-02-19 20:58:36,096 - INFO - Request completed in 0.004s - Status: 200
+2026-02-19 20:58:36,097 - INFO - 127.0.0.1 - - [19/Feb/2026 20:58:36] "GET /weather HTTP/1.1" 200 -
+2026-02-19 20:58:36,216 - INFO - Request from 127.0.0.1 by Anonymous: GET /exchange [Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537]
+2026-02-19 20:58:36,217 - INFO - Request completed in 0.001s - Status: 200
+2026-02-19 20:58:36,217 - INFO - 127.0.0.1 - - [19/Feb/2026 20:58:36] "GET /exchange HTTP/1.1" 200 -
+2026-02-19 20:58:36,352 - INFO - Request from 127.0.0.1 by Anonymous: GET /prayer-times [Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537]
+2026-02-19 20:58:36,353 - INFO - Request completed in 0.001s - Status: 200
+2026-02-19 20:58:36,354 - INFO - 127.0.0.1 - - [19/Feb/2026 20:58:36] "GET /prayer-times HTTP/1.1" 200 -
+2026-02-19 20:58:36,493 - INFO - Request from 127.0.0.1 by Anonymous: GET /offline [Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537]
+2026-02-19 20:58:36,494 - INFO - Request completed in 0.001s - Status: 200
+2026-02-19 20:58:36,495 - INFO - 127.0.0.1 - - [19/Feb/2026 20:58:36] "GET /offline HTTP/1.1" 200 -
+2026-02-19 20:58:36,985 - INFO - Request from 127.0.0.1 by Anonymous: GET /static/screen_lock_prevention.js [Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537]
+2026-02-19 20:58:37,009 - INFO - Request completed in 0.024s - Status: 200
+2026-02-19 20:58:37,010 - INFO - 127.0.0.1 - - [19/Feb/2026 20:58:37] "GET /static/screen_lock_prevention.js HTTP/1.1" 200 -
+2026-02-19 20:58:43,443 - INFO - Running job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 20:59:43 +03)" (scheduled at 2026-02-19 20:58:43.438304+03:00)
+2026-02-19 20:58:43,444 - INFO - Job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 20:59:43 +03)" executed successfully
+2026-02-19 20:59:00,851 - INFO - Request from 127.0.0.1 by Anonymous: GET /muzik [Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537]
+2026-02-19 20:59:02,933 - INFO - Request completed in 2.082s - Status: 200
+2026-02-19 20:59:02,933 - INFO - 127.0.0.1 - - [19/Feb/2026 20:59:02] "GET /muzik HTTP/1.1" 200 -
+2026-02-19 20:59:03,176 - INFO - Request from 127.0.0.1 by Anonymous: GET /muzik/api/music/playlists/global [Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537]
+2026-02-19 20:59:03,337 - INFO - Request from 127.0.0.1 by Anonymous: GET /static/music-manifest.json [Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537]
+2026-02-19 20:59:03,338 - INFO - Request completed in 0.001s - Status: 200
+2026-02-19 20:59:03,338 - INFO - 127.0.0.1 - - [19/Feb/2026 20:59:03] "GET /static/music-manifest.json HTTP/1.1" 200 -
+2026-02-19 20:59:05,229 - INFO - Request completed in 2.053s - Status: 200
+2026-02-19 20:59:05,229 - INFO - 127.0.0.1 - - [19/Feb/2026 20:59:05] "GET /muzik/api/music/playlists/global HTTP/1.1" 200 -
+2026-02-19 20:59:05,335 - INFO - Request from 127.0.0.1 by Anonymous: GET /muzik/api/music/playlists/1/songs [Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537]
+2026-02-19 20:59:07,395 - INFO - Request completed in 2.060s - Status: 200
+2026-02-19 20:59:07,395 - INFO - 127.0.0.1 - - [19/Feb/2026 20:59:07] "GET /muzik/api/music/playlists/1/songs HTTP/1.1" 200 -
+2026-02-19 20:59:37,855 - INFO - Request from 127.0.0.1 by Anonymous: GET /.well-known/assetlinks.json [GoogleAssociationService]
+2026-02-19 20:59:37,855 - WARNING - 404 error: http://app.articnc.online/.well-known/assetlinks.json
+2026-02-19 20:59:37,859 - INFO - Request from 127.0.0.1 by Anonymous: GET /.well-known/assetlinks.json [GoogleAssociationService]
+2026-02-19 20:59:37,859 - WARNING - 404 error: http://app.articnc.online/.well-known/assetlinks.json
+2026-02-19 20:59:37,998 - INFO - Request completed in 0.143s - Status: 404
+2026-02-19 20:59:37,998 - INFO - 127.0.0.1 - - [19/Feb/2026 20:59:37] "[33mGET /.well-known/assetlinks.json HTTP/1.1[0m" 404 -
+2026-02-19 20:59:38,128 - INFO - Request completed in 0.269s - Status: 404
+2026-02-19 20:59:38,129 - INFO - 127.0.0.1 - - [19/Feb/2026 20:59:38] "[33mGET /.well-known/assetlinks.json HTTP/1.1[0m" 404 -
+2026-02-19 20:59:43,442 - INFO - Running job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:00:43 +03)" (scheduled at 2026-02-19 20:59:43.438304+03:00)
+2026-02-19 20:59:43,443 - INFO - Job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:00:43 +03)" executed successfully
+2026-02-19 20:59:57,854 - INFO - Request from 127.0.0.1 by Anonymous: GET /music [Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537]
+2026-02-19 20:59:57,855 - INFO - Request completed in 0.001s - Status: 200
+2026-02-19 20:59:57,855 - INFO - 127.0.0.1 - - [19/Feb/2026 20:59:57] "GET /music?pwa=true HTTP/1.1" 200 -
+2026-02-19 20:59:58,314 - INFO - Request from 127.0.0.1 by Anonymous: GET /api/music/playlists/global [Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537]
+2026-02-19 20:59:58,315 - INFO - Request completed in 0.001s - Status: 200
+2026-02-19 20:59:58,315 - INFO - 127.0.0.1 - - [19/Feb/2026 20:59:58] "GET /api/music/playlists/global HTTP/1.1" 200 -
+2026-02-19 20:59:58,441 - INFO - Request from 127.0.0.1 by Anonymous: GET /api/music/playlists/1/songs [Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537]
+2026-02-19 20:59:58,442 - INFO - Request completed in 0.001s - Status: 200
+2026-02-19 20:59:58,442 - INFO - 127.0.0.1 - - [19/Feb/2026 20:59:58] "GET /api/music/playlists/1/songs HTTP/1.1" 200 -
+2026-02-19 21:00:06,500 - INFO - Request from 127.0.0.1 by Anonymous: POST /api/get-audio-stream [Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537]
+2026-02-19 21:00:08,241 - INFO - Request completed in 1.741s - Status: 200
+2026-02-19 21:00:08,241 - INFO - 127.0.0.1 - - [19/Feb/2026 21:00:08] "POST /api/get-audio-stream HTTP/1.1" 200 -
+2026-02-19 21:00:11,720 - INFO - Request from 127.0.0.1 by Anonymous: POST /api/get-audio-stream [Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537]
+2026-02-19 21:00:13,224 - INFO - Request completed in 1.504s - Status: 200
+2026-02-19 21:00:13,225 - INFO - 127.0.0.1 - - [19/Feb/2026 21:00:13] "POST /api/get-audio-stream HTTP/1.1" 200 -
+2026-02-19 21:00:17,895 - INFO - Request from 127.0.0.1 by Anonymous: POST /api/music/init-default-playlists [Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537]
+2026-02-19 21:00:17,896 - INFO - Request completed in 0.001s - Status: 200
+2026-02-19 21:00:17,896 - INFO - 127.0.0.1 - - [19/Feb/2026 21:00:17] "POST /api/music/init-default-playlists HTTP/1.1" 200 -
+2026-02-19 21:00:17,998 - INFO - Request from 127.0.0.1 by Anonymous: GET /api/music/playlists/global [Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537]
+2026-02-19 21:00:18,000 - INFO - Request completed in 0.001s - Status: 200
+2026-02-19 21:00:18,000 - INFO - 127.0.0.1 - - [19/Feb/2026 21:00:18] "GET /api/music/playlists/global HTTP/1.1" 200 -
+2026-02-19 21:00:18,110 - INFO - Request from 127.0.0.1 by Anonymous: GET /api/music/playlists/my [Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537]
+2026-02-19 21:00:18,114 - INFO - Request completed in 0.005s - Status: 200
+2026-02-19 21:00:18,117 - INFO - 127.0.0.1 - - [19/Feb/2026 21:00:18] "GET /api/music/playlists/my HTTP/1.1" 200 -
+2026-02-19 21:00:30,220 - INFO - Request from 127.0.0.1 by Anonymous: POST /api/music/init-default-playlists [Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537]
+2026-02-19 21:00:30,221 - INFO - Request completed in 0.001s - Status: 200
+2026-02-19 21:00:30,221 - INFO - 127.0.0.1 - - [19/Feb/2026 21:00:30] "POST /api/music/init-default-playlists HTTP/1.1" 200 -
+2026-02-19 21:00:30,334 - INFO - Request from 127.0.0.1 by Anonymous: GET /api/music/playlists/global [Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537]
+2026-02-19 21:00:30,335 - INFO - Request completed in 0.001s - Status: 200
+2026-02-19 21:00:30,336 - INFO - 127.0.0.1 - - [19/Feb/2026 21:00:30] "GET /api/music/playlists/global HTTP/1.1" 200 -
+2026-02-19 21:00:30,451 - INFO - Request from 127.0.0.1 by Anonymous: GET /api/music/playlists/my [Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537]
+2026-02-19 21:00:30,451 - INFO - Request completed in 0.001s - Status: 200
+2026-02-19 21:00:30,452 - INFO - 127.0.0.1 - - [19/Feb/2026 21:00:30] "GET /api/music/playlists/my HTTP/1.1" 200 -
+2026-02-19 21:00:31,379 - INFO - Request from 127.0.0.1 by Anonymous: GET /api/music/playlists/1/songs [Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537]
+2026-02-19 21:00:31,380 - INFO - Request completed in 0.001s - Status: 200
+2026-02-19 21:00:31,381 - INFO - 127.0.0.1 - - [19/Feb/2026 21:00:31] "GET /api/music/playlists/1/songs HTTP/1.1" 200 -
+2026-02-19 21:00:36,319 - INFO - Request from 127.0.0.1 by Anonymous: POST /api/get-audio-stream [Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537]
+2026-02-19 21:00:38,129 - INFO - Request completed in 1.810s - Status: 200
+2026-02-19 21:00:38,129 - INFO - 127.0.0.1 - - [19/Feb/2026 21:00:38] "POST /api/get-audio-stream HTTP/1.1" 200 -
+2026-02-19 21:00:43,443 - INFO - Running job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:01:43 +03)" (scheduled at 2026-02-19 21:00:43.438304+03:00)
+2026-02-19 21:00:43,451 - INFO - Job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:01:43 +03)" executed successfully
+2026-02-19 21:01:04,932 - INFO - Request from 127.0.0.1 by Anonymous: POST /api/get-audio-stream [Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537]
+2026-02-19 21:01:06,892 - INFO - Request completed in 1.960s - Status: 200
+2026-02-19 21:01:06,893 - INFO - 127.0.0.1 - - [19/Feb/2026 21:01:06] "POST /api/get-audio-stream HTTP/1.1" 200 -
+2026-02-19 21:01:43,441 - INFO - Running job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:02:43 +03)" (scheduled at 2026-02-19 21:01:43.438304+03:00)
+2026-02-19 21:01:43,442 - INFO - Job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:02:43 +03)" executed successfully
+2026-02-19 21:02:43,441 - INFO - Running job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:03:43 +03)" (scheduled at 2026-02-19 21:02:43.438304+03:00)
+2026-02-19 21:02:43,441 - INFO - Job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:03:43 +03)" executed successfully
+2026-02-19 21:03:43,441 - INFO - Running job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:04:43 +03)" (scheduled at 2026-02-19 21:03:43.438304+03:00)
+2026-02-19 21:03:43,442 - INFO - Job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:04:43 +03)" executed successfully
+2026-02-19 21:04:43,439 - INFO - Running job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:05:43 +03)" (scheduled at 2026-02-19 21:04:43.438304+03:00)
+2026-02-19 21:04:43,440 - INFO - Job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:05:43 +03)" executed successfully
+2026-02-19 21:05:43,439 - INFO - Running job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:06:43 +03)" (scheduled at 2026-02-19 21:05:43.438304+03:00)
+2026-02-19 21:05:43,440 - INFO - Job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:06:43 +03)" executed successfully
+2026-02-19 21:06:43,439 - INFO - Running job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:07:43 +03)" (scheduled at 2026-02-19 21:06:43.438304+03:00)
+2026-02-19 21:06:43,440 - INFO - Job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:07:43 +03)" executed successfully
+2026-02-19 21:07:43,442 - INFO - Running job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:08:43 +03)" (scheduled at 2026-02-19 21:07:43.438304+03:00)
+2026-02-19 21:07:43,444 - INFO - Job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:08:43 +03)" executed successfully
+2026-02-19 21:08:43,439 - INFO - Running job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:09:43 +03)" (scheduled at 2026-02-19 21:08:43.438304+03:00)
+2026-02-19 21:08:43,441 - INFO - Job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:09:43 +03)" executed successfully
+2026-02-19 21:09:43,454 - INFO - Running job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:10:43 +03)" (scheduled at 2026-02-19 21:09:43.438304+03:00)
+2026-02-19 21:09:43,455 - INFO - Job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:10:43 +03)" executed successfully
+2026-02-19 21:10:43,438 - INFO - Running job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:11:43 +03)" (scheduled at 2026-02-19 21:10:43.438304+03:00)
+2026-02-19 21:10:43,440 - INFO - Job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:11:43 +03)" executed successfully
+2026-02-19 21:11:43,452 - INFO - Running job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:12:43 +03)" (scheduled at 2026-02-19 21:11:43.438304+03:00)
+2026-02-19 21:11:43,453 - INFO - Job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:12:43 +03)" executed successfully
+2026-02-19 21:12:43,451 - INFO - Running job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:13:43 +03)" (scheduled at 2026-02-19 21:12:43.438304+03:00)
+2026-02-19 21:12:43,452 - INFO - Job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:13:43 +03)" executed successfully
+2026-02-19 21:13:43,452 - INFO - Running job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:14:43 +03)" (scheduled at 2026-02-19 21:13:43.438304+03:00)
+2026-02-19 21:13:43,454 - INFO - Job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:14:43 +03)" executed successfully
+2026-02-19 21:14:43,452 - INFO - Running job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:15:43 +03)" (scheduled at 2026-02-19 21:14:43.438304+03:00)
+2026-02-19 21:14:43,453 - INFO - Job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:15:43 +03)" executed successfully
+2026-02-19 21:15:43,452 - INFO - Running job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:16:43 +03)" (scheduled at 2026-02-19 21:15:43.438304+03:00)
+2026-02-19 21:15:43,452 - INFO - Job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:16:43 +03)" executed successfully
+2026-02-19 21:16:43,450 - INFO - Running job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:17:43 +03)" (scheduled at 2026-02-19 21:16:43.438304+03:00)
+2026-02-19 21:16:43,456 - INFO - Job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:17:43 +03)" executed successfully
+2026-02-19 21:17:43,452 - INFO - Running job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:18:43 +03)" (scheduled at 2026-02-19 21:17:43.438304+03:00)
+2026-02-19 21:17:43,454 - INFO - Job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:18:43 +03)" executed successfully
+2026-02-19 21:18:43,451 - INFO - Running job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:19:43 +03)" (scheduled at 2026-02-19 21:18:43.438304+03:00)
+2026-02-19 21:18:43,451 - INFO - Job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:19:43 +03)" executed successfully
+2026-02-19 21:19:43,450 - INFO - Running job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:20:43 +03)" (scheduled at 2026-02-19 21:19:43.438304+03:00)
+2026-02-19 21:19:43,451 - INFO - Job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:20:43 +03)" executed successfully
+2026-02-19 21:20:43,441 - INFO - Running job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:21:43 +03)" (scheduled at 2026-02-19 21:20:43.438304+03:00)
+2026-02-19 21:20:43,442 - INFO - Job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:21:43 +03)" executed successfully
+2026-02-19 21:21:43,447 - INFO - Running job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:22:43 +03)" (scheduled at 2026-02-19 21:21:43.438304+03:00)
+2026-02-19 21:21:43,448 - INFO - Job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:22:43 +03)" executed successfully
+2026-02-19 21:22:43,439 - INFO - Running job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:23:43 +03)" (scheduled at 2026-02-19 21:22:43.438304+03:00)
+2026-02-19 21:22:43,440 - INFO - Job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:23:43 +03)" executed successfully
+2026-02-19 21:23:43,448 - INFO - Running job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:24:43 +03)" (scheduled at 2026-02-19 21:23:43.438304+03:00)
+2026-02-19 21:23:43,449 - INFO - Job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:24:43 +03)" executed successfully
+2026-02-19 21:24:43,446 - INFO - Running job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:25:43 +03)" (scheduled at 2026-02-19 21:24:43.438304+03:00)
+2026-02-19 21:24:43,447 - INFO - Job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:25:43 +03)" executed successfully
+2026-02-19 21:25:43,439 - INFO - Running job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:26:43 +03)" (scheduled at 2026-02-19 21:25:43.438304+03:00)
+2026-02-19 21:25:43,440 - INFO - Job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:26:43 +03)" executed successfully
+2026-02-19 21:26:43,446 - INFO - Running job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:27:43 +03)" (scheduled at 2026-02-19 21:26:43.438304+03:00)
+2026-02-19 21:26:43,448 - INFO - Job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:27:43 +03)" executed successfully
+2026-02-19 21:27:43,449 - INFO - Running job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:28:43 +03)" (scheduled at 2026-02-19 21:27:43.438304+03:00)
+2026-02-19 21:27:43,450 - INFO - Job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:28:43 +03)" executed successfully
+2026-02-19 21:28:43,453 - INFO - Running job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:29:43 +03)" (scheduled at 2026-02-19 21:28:43.438304+03:00)
+2026-02-19 21:28:43,453 - INFO - Job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:29:43 +03)" executed successfully
+2026-02-19 21:29:43,443 - INFO - Running job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:30:43 +03)" (scheduled at 2026-02-19 21:29:43.438304+03:00)
+2026-02-19 21:29:43,444 - INFO - Job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:30:43 +03)" executed successfully
+2026-02-19 21:30:43,451 - INFO - Running job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:31:43 +03)" (scheduled at 2026-02-19 21:30:43.438304+03:00)
+2026-02-19 21:30:43,452 - INFO - Job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:31:43 +03)" executed successfully
+2026-02-19 21:31:43,443 - INFO - Running job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:32:43 +03)" (scheduled at 2026-02-19 21:31:43.438304+03:00)
+2026-02-19 21:31:43,444 - INFO - Job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:32:43 +03)" executed successfully
+2026-02-19 21:32:43,440 - INFO - Running job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:33:43 +03)" (scheduled at 2026-02-19 21:32:43.438304+03:00)
+2026-02-19 21:32:43,442 - INFO - Job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:33:43 +03)" executed successfully
+2026-02-19 21:33:43,445 - INFO - Running job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:34:43 +03)" (scheduled at 2026-02-19 21:33:43.438304+03:00)
+2026-02-19 21:33:43,446 - INFO - Job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:34:43 +03)" executed successfully
+2026-02-19 21:34:43,442 - INFO - Running job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:35:43 +03)" (scheduled at 2026-02-19 21:34:43.438304+03:00)
+2026-02-19 21:34:43,442 - INFO - Job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:35:43 +03)" executed successfully
+2026-02-19 21:35:43,451 - INFO - Running job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:36:43 +03)" (scheduled at 2026-02-19 21:35:43.438304+03:00)
+2026-02-19 21:35:43,452 - INFO - Job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:36:43 +03)" executed successfully
+2026-02-19 21:36:43,442 - INFO - Running job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:37:43 +03)" (scheduled at 2026-02-19 21:36:43.438304+03:00)
+2026-02-19 21:36:43,443 - INFO - Job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:37:43 +03)" executed successfully
+2026-02-19 21:37:43,443 - INFO - Running job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:38:43 +03)" (scheduled at 2026-02-19 21:37:43.438304+03:00)
+2026-02-19 21:37:43,444 - INFO - Job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:38:43 +03)" executed successfully
+2026-02-19 21:38:43,450 - INFO - Running job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:39:43 +03)" (scheduled at 2026-02-19 21:38:43.438304+03:00)
+2026-02-19 21:38:43,457 - INFO - Job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:39:43 +03)" executed successfully
+2026-02-19 21:39:43,451 - INFO - Running job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:40:43 +03)" (scheduled at 2026-02-19 21:39:43.438304+03:00)
+2026-02-19 21:39:43,451 - INFO - Job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:40:43 +03)" executed successfully
+2026-02-19 21:40:43,443 - INFO - Running job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:41:43 +03)" (scheduled at 2026-02-19 21:40:43.438304+03:00)
+2026-02-19 21:40:43,447 - INFO - Job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:41:43 +03)" executed successfully
+2026-02-19 21:41:43,438 - INFO - Running job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:42:43 +03)" (scheduled at 2026-02-19 21:41:43.438304+03:00)
+2026-02-19 21:41:43,439 - INFO - Job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:42:43 +03)" executed successfully
+2026-02-19 21:42:43,448 - INFO - Running job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:43:43 +03)" (scheduled at 2026-02-19 21:42:43.438304+03:00)
+2026-02-19 21:42:43,448 - INFO - Job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:43:43 +03)" executed successfully
+2026-02-19 21:43:43,447 - INFO - Running job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:44:43 +03)" (scheduled at 2026-02-19 21:43:43.438304+03:00)
+2026-02-19 21:43:43,448 - INFO - Job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:44:43 +03)" executed successfully
+2026-02-19 21:44:43,451 - INFO - Running job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:45:43 +03)" (scheduled at 2026-02-19 21:44:43.438304+03:00)
+2026-02-19 21:44:43,454 - INFO - Job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:45:43 +03)" executed successfully
+2026-02-19 21:45:43,443 - INFO - Running job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:46:43 +03)" (scheduled at 2026-02-19 21:45:43.438304+03:00)
+2026-02-19 21:45:43,444 - INFO - Job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:46:43 +03)" executed successfully
+2026-02-19 21:46:43,446 - INFO - Running job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:47:43 +03)" (scheduled at 2026-02-19 21:46:43.438304+03:00)
+2026-02-19 21:46:43,447 - INFO - Job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 21:47:43 +03)" executed successfully
+2026-02-19 22:00:53,740 - INFO - Uygulama baþlatýldý
+2026-02-19 22:00:55,028 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-02-19 22:00:55,028 - INFO - Added job "check_prayer_times_and_notify" to job store "default"
+2026-02-19 22:00:55,029 - INFO - Scheduler started
+2026-02-19 22:00:55,039 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.20:5000
+2026-02-19 22:00:55,039 - INFO - [33mPress CTRL+C to quit[0m
+2026-02-19 22:01:12,270 - INFO - Request from 127.0.0.1 by Anonymous: GET /music [Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac O]
+2026-02-19 22:01:12,279 - INFO - Request completed in 0.009s - Status: 200
+2026-02-19 22:01:12,279 - INFO - 127.0.0.1 - - [19/Feb/2026 22:01:12] "GET /music?pwa=true HTTP/1.1" 200 -
+2026-02-19 22:01:12,946 - INFO - Request from 127.0.0.1 by Anonymous: GET /api/music/playlists/global [Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac O]
+2026-02-19 22:01:12,947 - INFO - Request completed in 0.001s - Status: 200
+2026-02-19 22:01:12,947 - INFO - 127.0.0.1 - - [19/Feb/2026 22:01:12] "GET /api/music/playlists/global HTTP/1.1" 200 -
+2026-02-19 22:01:13,041 - INFO - Request from 127.0.0.1 by Anonymous: GET /api/music/playlists/1/songs [Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac O]
+2026-02-19 22:01:13,042 - INFO - Request completed in 0.001s - Status: 200
+2026-02-19 22:01:13,042 - INFO - 127.0.0.1 - - [19/Feb/2026 22:01:13] "GET /api/music/playlists/1/songs HTTP/1.1" 200 -
+2026-02-19 22:01:15,166 - INFO - Request from 127.0.0.1 by Anonymous: POST /api/get-audio-stream [Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac O]
+2026-02-19 22:01:17,638 - INFO - Request completed in 2.473s - Status: 200
+2026-02-19 22:01:17,639 - INFO - 127.0.0.1 - - [19/Feb/2026 22:01:17] "POST /api/get-audio-stream HTTP/1.1" 200 -
+2026-02-19 22:01:22,156 - INFO - Request from 127.0.0.1 by Anonymous: POST /api/music/init-default-playlists [Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac O]
+2026-02-19 22:01:22,157 - INFO - Request completed in 0.001s - Status: 200
+2026-02-19 22:01:22,157 - INFO - 127.0.0.1 - - [19/Feb/2026 22:01:22] "POST /api/music/init-default-playlists HTTP/1.1" 200 -
+2026-02-19 22:01:22,271 - INFO - Request from 127.0.0.1 by Anonymous: GET /api/music/playlists/global [Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac O]
+2026-02-19 22:01:22,272 - INFO - Request completed in 0.001s - Status: 200
+2026-02-19 22:01:22,273 - INFO - 127.0.0.1 - - [19/Feb/2026 22:01:22] "GET /api/music/playlists/global HTTP/1.1" 200 -
+2026-02-19 22:01:22,372 - INFO - Request from 127.0.0.1 by Anonymous: GET /api/music/playlists/my [Mozilla/5.0 (iPhone; CPU iPhone OS 18_7 like Mac O]
+2026-02-19 22:01:22,373 - INFO - Request completed in 0.001s - Status: 200
+2026-02-19 22:01:22,373 - INFO - 127.0.0.1 - - [19/Feb/2026 22:01:22] "GET /api/music/playlists/my HTTP/1.1" 200 -
+2026-02-19 22:01:55,044 - INFO - Running job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 22:01:55 +03)" (scheduled at 2026-02-19 22:01:55.028484+03:00)
+2026-02-19 22:01:55,045 - INFO - Job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 22:02:55 +03)" executed successfully
+2026-02-19 22:02:55,038 - INFO - Running job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 22:03:55 +03)" (scheduled at 2026-02-19 22:02:55.028484+03:00)
+2026-02-19 22:02:55,039 - INFO - Job "check_prayer_times_and_notify (trigger: interval[0:01:00], next run at: 2026-02-19 22:03:55 +03)" executed successfully

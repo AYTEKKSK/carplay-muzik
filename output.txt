@@ -1,0 +1,8 @@
+[OK] Music database initialized: d:\muzik\music_playlists.db
+[OK] YouTube Muzik baslatiliyor -> http://localhost:5051
+   Internet: app.articnc.online/muzik
+ * Serving Flask app 'app'
+ * Debug mode: on
+[OK] Music database initialized: d:\muzik\music_playlists.db
+[OK] YouTube Muzik baslatiliyor -> http://localhost:5051
+   Internet: app.articnc.online/muzik

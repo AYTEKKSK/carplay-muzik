@@ -1,0 +1,18 @@
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5051
+ * Running on http://192.168.1.20:5051
+Press CTRL+C to quit
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 144-278-152
+127.0.0.1 - - [19/Feb/2026 19:54:20] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [19/Feb/2026 19:55:01] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [19/Feb/2026 20:41:04] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [19/Feb/2026 20:41:06] "GET /api/music/playlists/global HTTP/1.1" 200 -
+127.0.0.1 - - [19/Feb/2026 20:41:09] "GET /api/music/playlists/1/songs HTTP/1.1" 200 -
+127.0.0.1 - - [19/Feb/2026 20:41:22] "POST /api/music/search HTTP/1.1" 200 -
+127.0.0.1 - - [19/Feb/2026 20:41:41] "GET /api/music/playlists/global HTTP/1.1" 200 -
+127.0.0.1 - - [19/Feb/2026 20:41:43] "GET /api/music/playlists/my HTTP/1.1" 200 -
+127.0.0.1 - - [19/Feb/2026 20:41:48] "POST /api/music/playlists/2/add-song HTTP/1.1" 200 -
+ * Detected change in 'd:\\muzik\\music_database.py', reloading

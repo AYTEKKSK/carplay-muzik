@@ -1,0 +1,18 @@
+2026-02-19 20:47:21,715 ERROR: Exception on /api/exchange-rates [GET] [in C:\visualdeneme\.venv\Lib\site-packages\flask\app.py:875]
+Traceback (most recent call last):
+  File "C:\visualdeneme\.venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\visualdeneme\.venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\visualdeneme\.venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\visualdeneme\.venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "d:\yazilimyedekler\visualdeneme15\api_routes.py", line 19, in decorated_function
+    return f(*args, **kwargs)
+  File "d:\yazilimyedekler\visualdeneme15\api_routes.py", line 1269, in api_exchange_rates
+    'lastUpdate': datetime.now().isoformat(),
+                  ^^^^^^^^
+NameError: name 'datetime' is not defined. Did you forget to import 'datetime'?
+2026-02-19 20:47:21,719 ERROR: 500 error: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application. [in d:\yazilimyedekler\visualdeneme15\basit_hesap_makinesi.py:434]
